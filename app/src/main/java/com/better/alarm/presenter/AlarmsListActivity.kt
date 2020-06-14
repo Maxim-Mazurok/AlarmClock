@@ -32,6 +32,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentTransaction
 import com.better.alarm.BuildConfig
 import com.better.alarm.NotificationSettings
 import com.better.alarm.R
@@ -80,7 +81,7 @@ class AlarmsListActivity : AppCompatActivity() {
         }
 
         private fun createStore(edited: EditedAlarm, alarms: IAlarmsManager): UiStore {
-            return object : UiStore {
+            class UiStoreIR : UiStore {
                 var onBackPressed = PublishSubject.create<String>()
                 var editing: BehaviorSubject<EditedAlarm> = BehaviorSubject.createDefault(edited)
                 var transitioningToNewAlarmDetails: Subject<Boolean> = BehaviorSubject.createDefault(false)
@@ -139,6 +140,8 @@ class AlarmsListActivity : AppCompatActivity() {
                             holder = Optional.of(holder)))
                 }
             }
+
+            return UiStoreIR()
         }
     }
 
@@ -326,7 +329,7 @@ class AlarmsListActivity : AppCompatActivity() {
         }
     }
 
-    private fun RowHolder.addSharedElementsToTransition(fragmentTransaction: androidx.fragment.app.FragmentTransaction) {
+    private fun RowHolder.addSharedElementsToTransition(fragmentTransaction: FragmentTransaction) {
         fragmentTransaction.addSharedElement(digitalClock, "clock" + alarmId)
         fragmentTransaction.addSharedElement(container, "onOff" + alarmId)
         fragmentTransaction.addSharedElement(detailsButton, "detailsButton" + alarmId)
@@ -349,9 +352,9 @@ class AlarmsListActivity : AppCompatActivity() {
                                     daysOfWeek = DaysOfWeek(savedInstanceState.getInt("daysOfWeek")),
                                     isPrealarm = savedInstanceState.getBoolean("isPrealarm"),
                                     alarmtone = Alarmtone.fromString(savedInstanceState.getString("alarmtone")),
-                                    label = savedInstanceState.getString("label"),
+                                    label = savedInstanceState.getString("label")!!,
                                     isVibrate = true,
-                                    state = savedInstanceState.getString("state"),
+                                    state = savedInstanceState.getString("state")!!,
                                     nextTime = Calendar.getInstance()
                             )
                     )

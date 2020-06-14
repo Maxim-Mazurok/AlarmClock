@@ -80,6 +80,7 @@ class VolumePreference(mContext: Context, attrs: AttributeSet) : Preference(mCon
         super.onDetached()
         disposable.dispose()
     }
+
     fun onResume() {
         ringtoneSummary?.text = RingtoneManager.getRingtone(context, RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM))
                 ?.getTitle(context)

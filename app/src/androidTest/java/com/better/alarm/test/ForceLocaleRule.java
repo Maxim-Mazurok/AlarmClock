@@ -2,6 +2,7 @@ package com.better.alarm.test;
 
 import android.content.res.Configuration;
 import android.content.res.Resources;
+
 import androidx.test.InstrumentationRegistry;
 
 import org.junit.rules.TestRule;

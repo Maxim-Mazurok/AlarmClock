@@ -4,8 +4,8 @@ import android.content.ContentUris
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
-import com.better.alarm.model.AlarmValue
 import com.better.alarm.model.AlarmStore
+import com.better.alarm.model.AlarmValue
 import com.better.alarm.model.Alarmtone
 import com.better.alarm.model.Calendars
 import com.better.alarm.model.ContainerFactory
@@ -24,7 +24,7 @@ class PersistingContainerFactory(private val calendars: Calendars, private val m
     private val subscriptions = mutableMapOf<Int, Disposable>()
 
     private fun createStore(initial: AlarmValue): AlarmStore {
-        return object : AlarmStore {
+        class AlarmStoreIR : AlarmStore {
             private val subject = BehaviorSubject.createDefault(initial)
             override var value: AlarmValue
                 get() = requireNotNull(subject.value)
@@ -42,6 +42,8 @@ class PersistingContainerFactory(private val calendars: Calendars, private val m
                 mContext.contentResolver.delete(uri, "", null)
             }
         }
+
+        return AlarmStoreIR()
     }
 
     override fun create(c: Cursor): AlarmStore {

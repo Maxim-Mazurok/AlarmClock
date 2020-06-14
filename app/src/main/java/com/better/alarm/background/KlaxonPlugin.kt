@@ -15,6 +15,7 @@ interface Player {
     fun startAlarm()
     fun setDataSourceFromResource(res: Int)
     fun setPerceivedVolume(perceived: Float)
+
     /**
      * Stops alarm audio
      */

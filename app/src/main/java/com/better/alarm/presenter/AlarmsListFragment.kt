@@ -59,7 +59,7 @@ class AlarmsListFragment : Fragment() {
     /** changed by [Prefs.listRowLayout] in [onResume]*/
     private var listRowLayout = prefs.layout()
 
-    inner class AlarmListAdapter(alarmTime: Int, label: Int, private val values: List<AlarmValue>) : ArrayAdapter<AlarmValue>(activity, alarmTime, label, values) {
+    inner class AlarmListAdapter(alarmTime: Int, label: Int, private val values: List<AlarmValue>) : ArrayAdapter<AlarmValue>(requireContext(), alarmTime, label, values) {
 
         private fun recycleView(convertView: View?, parent: ViewGroup, id: Int): RowHolder {
             val tag = convertView?.tag
@@ -166,7 +166,7 @@ class AlarmsListFragment : Fragment() {
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
         val info = item.menuInfo as AdapterContextMenuInfo
-        val alarm = mAdapter.getItem(info.position)
+        val alarm = requireNotNull(mAdapter.getItem(info.position))
         when (item.itemId) {
             R.id.delete_alarm -> {
                 // Confirm that the alarm will be deleted.
@@ -216,7 +216,7 @@ class AlarmsListFragment : Fragment() {
         listView.choiceMode = AbsListView.CHOICE_MODE_SINGLE
 
         listView.onItemClickListener = AdapterView.OnItemClickListener { _, listRow, position, _ ->
-            val id = mAdapter.getItem(position).id
+            val id = requireNotNull(mAdapter.getItem(position)).id
             uiStore.edit(id, listRow.tag as RowHolder)
         }
 

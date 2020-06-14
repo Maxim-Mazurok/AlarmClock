@@ -5,8 +5,8 @@ import com.better.alarm.configuration.Store
 import com.better.alarm.logger.Logger
 import com.better.alarm.logger.SysoutLogWriter
 import com.better.alarm.model.AlarmCore
-import com.better.alarm.model.AlarmValue
 import com.better.alarm.model.AlarmSetter
+import com.better.alarm.model.AlarmValue
 import com.better.alarm.model.AlarmsScheduler
 import com.better.alarm.model.Alarmtone
 import com.better.alarm.model.CalendarType

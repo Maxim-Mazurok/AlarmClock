@@ -5,11 +5,12 @@ import androidx.test.espresso.Espresso.onData
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.matcher.ViewMatchers.*
+import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
+import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.rule.ActivityTestRule
 import androidx.test.runner.AndroidJUnit4
 import com.better.alarm.R
-import com.better.alarm.configuration.AlarmApplication
 import com.better.alarm.configuration.overrideIs24hoursFormatOverride
 import com.better.alarm.interfaces.PresentationToModelIntents
 import com.better.alarm.model.AlarmSetter
@@ -17,7 +18,6 @@ import com.better.alarm.model.AlarmValue
 import com.better.alarm.model.AlarmsReceiver
 import com.better.alarm.model.CalendarType
 import com.better.alarm.presenter.AlarmsListActivity
-import com.better.alarm.util.Optional
 import cortado.Cortado
 import org.hamcrest.Matchers.anything
 import org.junit.Rule
@@ -25,7 +25,7 @@ import org.junit.Test
 import org.junit.rules.RuleChain
 import org.junit.rules.TestRule
 import org.junit.runner.RunWith
-import java.util.*
+import java.util.Locale
 
 @RunWith(AndroidJUnit4::class)
 class ListTest : BaseTest() {

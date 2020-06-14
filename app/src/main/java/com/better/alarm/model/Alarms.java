@@ -16,6 +16,7 @@
 package com.better.alarm.model;
 
 import android.annotation.SuppressLint;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 

@@ -806,8 +806,8 @@ class AlarmCore(
     override fun edit(func: AlarmValue.() -> AlarmValue) {
         val prev = container
         change(func(prev).also {
-            assert(prev.state == it.state)
-            assert(prev.nextTime == it.nextTime)
+            require(prev.state == it.state)
+            require(prev.nextTime == it.nextTime)
         })
     }
 

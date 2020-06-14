@@ -1,12 +1,6 @@
-buildscript {
-    dependencies {
-        classpath(kotlin("gradle-plugin", version = "1.3.31"))
-    }
-}
-
 plugins {
     id("com.android.application")
-    kotlin("android")
+    id("org.jetbrains.kotlin.android")
     jacoco
 }
 
@@ -65,11 +59,11 @@ val acraEmail = project.rootProject.file("local.properties")
         .getOrDefault("acra.email", "")
 
 android {
-    compileSdkVersion(28)
+    compileSdkVersion(29)
     defaultConfig {
         applicationId = "com.better.alarm"
-        minSdkVersion(15)
-        targetSdkVersion(28)
+        minSdkVersion(21)
+        targetSdkVersion(29)
         testApplicationId = "com.better.alarm.test"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -108,19 +102,41 @@ android {
         preDexLibraries = System.getenv("TRAVIS") != "true"
     }
 
+    useLibrary("android.test.runner")
+    useLibrary("android.test.base")
+    useLibrary("android.test.mock")
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    useLibrary("android.test.runner")
-    useLibrary("android.test.base")
-    useLibrary("android.test.mock")
+    kotlinOptions {
+        jvmTarget = "1.8"
+        useIR = true
+    }
+
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.0.0-alpha06"
+    }
+}
+
+// compose
+dependencies {
+    val compose = "1.0.0-alpha06"
+    implementation("androidx.compose.ui:ui:$compose")
+    implementation("androidx.compose.foundation:foundation-layout:$compose")
+    implementation("androidx.compose.material:material:$compose")
+    implementation("androidx.ui:ui-tooling:$compose")
 }
 
 dependencies {
     // App dependencies
-    implementation(kotlin("stdlib", version = "1.3.30"))
+    implementation(kotlin("stdlib", version = project.extra["kotlin"] as String))
     implementation("ch.acra:acra-mail:5.5.0")
     implementation("com.melnykov:floatingactionbutton:1.2.0")
     implementation("io.reactivex.rxjava2:rxjava:2.2.0")

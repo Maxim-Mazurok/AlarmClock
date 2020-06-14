@@ -1,8 +1,8 @@
 package com.better.alarm.configuration
 
 import com.better.alarm.lollipop
-import com.better.alarm.stores.RxDataStore
 import com.better.alarm.stores.PrimitiveDataStoreFactory
+import com.better.alarm.stores.RxDataStore
 import com.better.alarm.stores.intStringDataStore
 import io.reactivex.Single
 
@@ -22,8 +22,8 @@ class Prefs private constructor(
         val listRowLayout: RxDataStore<String>,
         val autoSilence: RxDataStore<Int>,
         val fadeInTimeInSeconds: RxDataStore<Int>,
-        val vibrate: RxDataStore<Boolean>
-
+        val vibrate: RxDataStore<Boolean>,
+        val theme: RxDataStore<String>,
 ) {
     fun layout(): Layout {
         return listRowLayout
@@ -50,7 +50,8 @@ class Prefs private constructor(
                     listRowLayout = factory.stringDataStore(LIST_ROW_LAYOUT, LIST_ROW_LAYOUT_COMPACT),
                     autoSilence = factory.intStringDataStore("auto_silence", 10),
                     fadeInTimeInSeconds = factory.intStringDataStore(Prefs.KEY_FADE_IN_TIME_SEC, 30),
-                    vibrate = factory.booleanDataStore("vibrate", true)
+                    vibrate = factory.booleanDataStore("vibrate", true),
+                    theme = factory.stringDataStore("theme", "dark"),
             )
         }
 

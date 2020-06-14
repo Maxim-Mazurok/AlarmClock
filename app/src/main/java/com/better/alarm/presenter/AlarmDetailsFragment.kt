@@ -189,7 +189,7 @@ class AlarmDetailsFragment : Fragment() {
             }
         }
 
-        mLabel.addTextChangedListener(object : TextWatcher {
+        class TextWatcherIR : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
             }
 
@@ -204,7 +204,9 @@ class AlarmDetailsFragment : Fragment() {
                         }
                         .addToDisposables()
             }
-        })
+        }
+
+        mLabel.addTextChangedListener(TextWatcherIR())
 
         return view
     }
@@ -341,7 +343,7 @@ class AlarmDetailsFragment : Fragment() {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private fun hackRippleAndAnimation() {
         if (enterTransition is Transition) {
-            (enterTransition as Transition).addListener(object : Transition.TransitionListener {
+            class TransitionListenerIR : Transition.TransitionListener {
                 override fun onTransitionEnd(transition: Transition?) {
                     activity?.let { parentActivity ->
                         val selectableItemBackground = TypedValue().apply {
@@ -363,7 +365,9 @@ class AlarmDetailsFragment : Fragment() {
 
                 override fun onTransitionStart(transition: Transition?) {
                 }
-            })
+            }
+
+            (enterTransition as Transition).addListener(TransitionListenerIR())
         }
     }
 }
