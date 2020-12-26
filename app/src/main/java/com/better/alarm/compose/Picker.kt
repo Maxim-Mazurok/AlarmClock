@@ -1,6 +1,5 @@
 package com.better.alarm.compose
 
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -12,6 +11,7 @@ import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
@@ -20,7 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.Preview
 import com.better.alarm.R
 import com.better.alarm.compose.theme.ColoredTheme
 import com.better.alarm.compose.theme.themeColors
@@ -63,7 +63,7 @@ fun PickerPreview() {
 @Composable
 fun Picker(
   onCancel: () -> Unit,
-  onResult: (hour: Int, minute: Int, amPm: TimePickerPresenter.AmPm) -> Unit
+  onResult: (hour: Int, minute: Int, amPm: TimePickerPresenter.AmPm) -> Unit,
 ) {
   val presenter = remember { TimePickerPresenter(true) }
 

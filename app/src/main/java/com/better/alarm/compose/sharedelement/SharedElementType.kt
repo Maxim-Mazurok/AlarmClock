@@ -20,13 +20,13 @@ import androidx.compose.runtime.onDispose
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.staticAmbientOf
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.drawLayer
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.LayoutCoordinates
 import androidx.compose.ui.layout.boundsInRoot
-import androidx.compose.ui.onGloballyPositioned
-import androidx.compose.ui.platform.DensityAmbient
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.platform.AmbientDensity
 import com.better.alarm.compose.sharedelement.SharedElementTransition.InProgress
 import com.better.alarm.compose.sharedelement.SharedElementTransition.WaitingForEndElementPosition
 import com.better.alarm.compose.sharedelement.SharedElementsTracker.State.Empty
@@ -47,16 +47,16 @@ fun SharedElement(
   type: SharedElementType,
   modifier: Modifier = Modifier,
   placeholder: @Composable (() -> Unit)? = null,
-  children: @Composable () -> Unit
+  children: @Composable () -> Unit,
 ) {
   val elementInfo = SharedElementInfo(tag, type)
-  val rootState = SharedElementsRootStateAmbient.current
+  val rootState = AmbientSharedElementsRootState.current
 
   rootState.onElementRegistered(elementInfo)
 
   val recompose = invalidate
   val visibilityModifier =
-    if (rootState.shouldHideElement(elementInfo)) Modifier.drawLayer(alpha = 0f) else Modifier
+    if (rootState.shouldHideElement(elementInfo)) Modifier.graphicsLayer(alpha = 0f) else Modifier
   Box(modifier = modifier.then(visibilityModifier)) {
     Box(modifier = Modifier.onGloballyPositioned { coordinates ->
       rootState.onElementPositioned(
@@ -82,7 +82,7 @@ fun SharedElementsRoot(children: @Composable () -> Unit) {
   Box(modifier = Modifier.onGloballyPositioned { layoutCoordinates ->
     rootState.rootCoordinates = layoutCoordinates
   }) {
-    Providers(SharedElementsRootStateAmbient provides rootState) {
+    Providers(AmbientSharedElementsRootState provides rootState) {
       children()
     }
     SharedElementTransitionsOverlay(rootState)
@@ -135,7 +135,7 @@ private fun SharedElementTransitionsOverlay(rootState: SharedElementsRootState) 
 private fun SharedElementTransitionPlaceholder(
   sharedElement: PositionedSharedElement,
   transitionState: TransitionState,
-  propKeys: InProgress.SharedElementPropKeys
+  propKeys: InProgress.SharedElementPropKeys,
 ) {
   SharedElementTransitionPlaceholder(
     sharedElement = sharedElement,
@@ -154,9 +154,9 @@ private fun SharedElementTransitionPlaceholder(
   offsetY: Float,
   scaleX: Float = 1f,
   scaleY: Float = 1f,
-  alpha: Float = 1f
+  alpha: Float = 1f,
 ) {
-  with(DensityAmbient.current) {
+  with(AmbientDensity.current) {
     Box(
       modifier = Modifier.preferredSize(
         width = sharedElement.bounds.width.toDp(),
@@ -164,18 +164,18 @@ private fun SharedElementTransitionPlaceholder(
       ).offset(
         x = offsetX.toDp(),
         y = offsetY.toDp()
-      ).drawLayer(
+      ).graphicsLayer(
 //                elevation = Float.MAX_VALUE,
         scaleX = scaleX,
         scaleY = scaleY,
         alpha = alpha
       ),
-      children = { sharedElement.placeholder() }
+      content = { sharedElement.placeholder() }
     )
   }
 }
 
-private val SharedElementsRootStateAmbient = staticAmbientOf<SharedElementsRootState> {
+private val AmbientSharedElementsRootState = staticAmbientOf<SharedElementsRootState> {
   error("SharedElementsRoot not found. SharedElement must be hosted in SharedElementsRoot.")
 }
 
@@ -198,7 +198,7 @@ private class SharedElementsRootState {
     elementInfo: SharedElementInfo,
     placeholder: @Composable () -> Unit,
     coordinates: LayoutCoordinates,
-    invalidateElement: () -> Unit
+    invalidateElement: () -> Unit,
   ) {
     val element = PositionedSharedElement(
       info = elementInfo,
@@ -233,7 +233,7 @@ private class SharedElementsRootState {
 }
 
 private class SharedElementsTracker(
-  private val onTransitionChanged: () -> Unit
+  private val onTransitionChanged: () -> Unit,
 ) {
   private var state: State = Empty
 
@@ -332,7 +332,7 @@ private class SharedElementsTracker(
 
     class EndElementRegistered(
       override val startElement: PositionedSharedElement,
-      val endElementInfo: SharedElementInfo
+      val endElementInfo: SharedElementInfo,
     ) : StartElementPositioned(startElement) {
       override fun isRegistered(elementInfo: SharedElementInfo): Boolean {
         return super.isRegistered(elementInfo) || elementInfo == endElementInfo
@@ -347,8 +347,8 @@ private data class SharedElementInfo(val tag: SharedElementTag, val type: Shared
 
 private class PositionedSharedElement(
   val info: SharedElementInfo,
-  val placeholder: @Composable() () -> Unit,
-  val bounds: Rect
+  val placeholder: @Composable () -> Unit,
+  val bounds: Rect,
 )
 
 private sealed class SharedElementTransition(val startElement: PositionedSharedElement) {
@@ -359,7 +359,7 @@ private sealed class SharedElementTransition(val startElement: PositionedSharedE
   class InProgress(
     startElement: PositionedSharedElement,
     val endElement: PositionedSharedElement,
-    var onTransitionFinished: () -> Unit
+    var onTransitionFinished: () -> Unit,
   ) : SharedElementTransition(startElement) {
 
     val startElementPropKeys = SharedElementPropKeys()
@@ -416,10 +416,10 @@ private sealed class SharedElementTransition(val startElement: PositionedSharedE
     }
 
     class SharedElementPropKeys {
-      val position = OffsetPropKey()
-      val scaleX = FloatPropKey()
-      val scaleY = FloatPropKey()
-      val alpha = FloatPropKey()
+      val position = OffsetPropKey("position")
+      val scaleX = FloatPropKey("scaleX")
+      val scaleY = FloatPropKey("scaleY")
+      val alpha = FloatPropKey("alpha")
     }
   }
 }

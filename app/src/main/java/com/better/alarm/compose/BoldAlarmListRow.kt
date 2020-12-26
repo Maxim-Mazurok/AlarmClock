@@ -1,25 +1,30 @@
 package com.better.alarm.compose
 
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ConstraintLayout
 import androidx.compose.foundation.layout.Dimension
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
 import androidx.compose.material.Switch
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.composed
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.better.alarm.R
 import com.better.alarm.compose.sharedelement.SharedElement
 import com.better.alarm.compose.sharedelement.SharedElementType
+import com.better.alarm.compose.theme.ColoredTheme
+import com.better.alarm.compose.theme.themeColors
 
-@Composable
-private fun Modifier.debugBorder() = debugBorder(false)
+private fun Modifier.debugBorder() = composed { debugBorder(false) }
 
 /**
  * Create a list row from an separated params.
@@ -117,7 +122,7 @@ private fun BoldAlarmListRow(
     )
 
     Box(
-      alignment = Alignment.Center,
+      contentAlignment = Alignment.Center,
       modifier = Modifier
         .constrainAs(switch) {
           top.linkTo(parent.top)
@@ -138,7 +143,7 @@ private fun BoldAlarmListRow(
       )
     }
     Box(
-      alignment = Alignment.Center,
+      contentAlignment = Alignment.Center,
       modifier = Modifier.constrainAs(subText) {
         top.linkTo(switch.bottom)
         end.linkTo(parent.end)
@@ -153,6 +158,38 @@ private fun BoldAlarmListRow(
         modifier = Modifier.debugBorder(),
         tint = MaterialTheme.colors.primary
       )
+    }
+  }
+}
+
+@Preview
+@Composable
+fun ListRowPreview() {
+  ColoredTheme(colors = themeColors().first().colors) {
+    Surface {
+      Column(Modifier.sidePadding()) {
+        BoldAlarmListRow(
+          hour = 12,
+          minutes = 35,
+          isEnabled = true,
+          label = "Label",
+          onClick = { },
+          onOffChange = { },
+          onTimeClick = { },
+          layout = LayoutType.Bold,
+        )
+        ListDivider()
+        BoldAlarmListRow(
+          hour = 14,
+          minutes = 55,
+          isEnabled = false,
+          label = "Label",
+          onClick = { },
+          onOffChange = { },
+          onTimeClick = { },
+          layout = LayoutType.Classic,
+        )
+      }
     }
   }
 }

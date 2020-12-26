@@ -2,7 +2,6 @@ package com.better.alarm.compose
 
 import android.media.RingtoneManager
 import androidx.compose.animation.Crossfade
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -18,6 +17,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.material.TextField
 import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
@@ -26,11 +26,12 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.composed
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.ContextAmbient
+import androidx.compose.ui.platform.AmbientContext
 import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.ui.tooling.preview.Preview
 import com.better.alarm.R
 import com.better.alarm.compose.theme.ColoredTheme
 import com.better.alarm.compose.theme.themeColors
@@ -39,8 +40,7 @@ import com.better.alarm.model.DaysOfWeek
 import com.better.alarm.model.ringtoneManagerString
 import kotlinx.coroutines.launch
 
-@Composable
-private fun Modifier.debugBorder() = debugBorder(false)
+private fun Modifier.debugBorder() = composed { debugBorder(false) }
 
 @Composable
 fun DetailsScreen(
@@ -77,7 +77,7 @@ fun DetailsScreen(
         title = { Text(text = "Edit alarm") },
         actions = {
           IconButton(onClick = saveDetails) {
-            LoadingVectorImage(id = R.drawable.ic_baseline_done_24, tint = MaterialTheme.colors.secondary)
+            LoadingVectorImage(id = R.drawable.ic_baseline_done_24, tint = colors.secondary)
           }
         }
       )
@@ -128,7 +128,7 @@ private fun Details(
 ) {
   Column {
     TextWithLabel(
-      repeat.value.toString(ContextAmbient.current, false),
+      repeat.value.toString(AmbientContext.current, false),
       "Repeat",
       Modifier.clickable(onClick = { /* showDialog.value = true */ })
     )
@@ -136,7 +136,7 @@ private fun Details(
     // RepeatButtons(repeat.value, Modifier.padding(16.dp).fillMaxWidth())
     // ListDivider()
     val ringtone = remember { mutableStateOf("") }
-    val context = ContextAmbient.current
+    val context = AmbientContext.current
     rememberCoroutineScope().launch {
       ringtone.value = RingtoneManager.getRingtone(context, alarm.alarmtone.ringtoneManagerString())
         .getTitle(context)

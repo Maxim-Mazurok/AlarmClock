@@ -8,7 +8,7 @@ import androidx.compose.runtime.remember
 import io.reactivex.Observable
 
 @Composable
-fun <T> Observable<T>.commitSubscribe(onNext: (T) -> Unit) {
+fun <T> Observable<T>.CommitSubscribe(onNext: (T) -> Unit) {
   onCommit {
     val subscription = subscribe { onNext(it) }
     onDispose {
@@ -35,5 +35,3 @@ fun <T> Observable<T>.toState(initial: T): State<T> {
 fun <T> Observable<T>.toStateBlocking(): State<T> {
   return toState(initial = blockingFirst())
 }
-
-

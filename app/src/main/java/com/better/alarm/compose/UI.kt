@@ -50,7 +50,7 @@ private fun AppContent(
   val currentScreen = remember { mutableStateOf<Screen>(Screen.List) }
   val mutLayout = remember { mutableStateOf(LayoutType.Bold) }
   // TODO use it in screens
-  backs.backPressed.commitSubscribe { currentScreen.value = Screen.List }
+  backs.backPressed.CommitSubscribe { currentScreen.value = Screen.List }
 
   Crossfade(mutLayout.value) { layout ->
     Crossfade(currentScreen.value) { screen ->

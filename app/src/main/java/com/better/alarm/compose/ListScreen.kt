@@ -1,14 +1,13 @@
 package com.better.alarm.compose
 
 import androidx.compose.foundation.ScrollableRow
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumnFor
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.BottomAppBar
 import androidx.compose.material.Colors
@@ -19,6 +18,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.MaterialTheme.typography
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.material.TextButton
 import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
@@ -26,7 +26,8 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.ContextAmbient
+import androidx.compose.ui.composed
+import androidx.compose.ui.platform.AmbientContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.better.alarm.R
@@ -35,8 +36,7 @@ import com.better.alarm.model.AlarmValue
 import com.better.alarm.stores.RxDataStore
 import io.reactivex.Observable
 
-@Composable
-private fun Modifier.debugBorder() = debugBorder(false)
+private fun Modifier.debugBorder() = composed { debugBorder(false) }
 
 interface Editor {
   fun change(alarm: AlarmValue) {}
@@ -66,18 +66,17 @@ fun ListScreen(
     },
     floatingActionButton = {
       FloatingActionButton(
-        icon = {
-          LoadingVectorImage(R.drawable.ic_fab_plus)
-        },
         onClick = createNew,
         backgroundColor = MaterialTheme.colors.primaryVariant,
-      )
+      ) {
+        LoadingVectorImage(R.drawable.ic_fab_plus)
+      }
     },
     bodyContent = {
       AlarmsList(showDetails, editor, alarms, layout.value)
     },
     bottomBar = {
-      themeSelectionBottomBar(colors, layout)
+      ThemeSelectionBottomBar(colors, layout)
     }
   )
 }
@@ -89,7 +88,7 @@ enum class LayoutType {
 }
 
 @Composable
-private fun themeSelectionBottomBar(colorsStore: RxDataStore<String>, layout: MutableState<LayoutType>) {
+private fun ThemeSelectionBottomBar(colorsStore: RxDataStore<String>, layout: MutableState<LayoutType>) {
   BottomAppBar {
     ScrollableRow(horizontalArrangement = Arrangement.SpaceEvenly, modifier = Modifier.fillMaxWidth()) {
       themeColors().forEach { (name, key, colors) ->
@@ -132,46 +131,47 @@ private fun AlarmsList(
   showDetails: (AlarmValue) -> Unit,
   editor: Editor,
   alarms: Observable<List<AlarmValue>>,
-  layout: LayoutType
+  layout: LayoutType,
 ) {
   val data = alarms.toState(initial = emptyList())
-  LazyColumnFor(data.value,
-    modifier = Modifier
-      .fillMaxSize()
-      .sidePadding()
-      .debugBorder(),
-    itemContent = { alarm ->
-      val showPicker = remember { mutableStateOf(false) }
-      BoldAlarmListRow(
-        alarm = alarm,
-        onClick = { showDetails(alarm) },
-        onOffChange = { editor.change(alarm.copy(isEnabled = it)) },
-        onTimeClick = { showPicker.value = true },
-        layout = layout,
-      )
-      ListDivider()
-      if (showPicker.value) {
-        Dialog(onDismissRequest = { showPicker.value = false }) {
-          Surface(modifier = Modifier.padding(vertical = 64.dp)) {
-            Column {
-              Picker(
-                onCancel = { showPicker.value = false },
-                onResult = { resHour, resMinute, _ ->
-                  editor.change(
-                    alarm.copy(
-                      hour = resHour,
-                      minutes = resMinute,
-                      isEnabled = true,
+  LazyColumn(modifier = Modifier
+    .fillMaxSize()
+    .sidePadding()
+    .debugBorder()) {
+    items(data.value,
+      itemContent = { alarm ->
+        val showPicker = remember { mutableStateOf(false) }
+        BoldAlarmListRow(
+          alarm = alarm,
+          onClick = { showDetails(alarm) },
+          onOffChange = { editor.change(alarm.copy(isEnabled = it)) },
+          onTimeClick = { showPicker.value = true },
+          layout = layout,
+        )
+        ListDivider()
+        if (showPicker.value) {
+          Dialog(onDismissRequest = { showPicker.value = false }) {
+            Surface(modifier = Modifier.padding(vertical = 64.dp)) {
+              Column {
+                Picker(
+                  onCancel = { showPicker.value = false },
+                  onResult = { resHour, resMinute, _ ->
+                    editor.change(
+                      alarm.copy(
+                        hour = resHour,
+                        minutes = resMinute,
+                        isEnabled = true,
+                      )
                     )
-                  )
-                  showPicker.value = false
-                },
-              )
+                    showPicker.value = false
+                  },
+                )
+              }
             }
           }
         }
-      }
-    })
+      })
+  }
 }
 
 /**
@@ -190,7 +190,7 @@ private fun BoldAlarmListRow(
     minutes = alarm.minutes,
     isEnabled = alarm.isEnabled,
     label = alarm.label,
-    repeat = alarm.daysOfWeek.toString(ContextAmbient.current, false),
+    repeat = alarm.daysOfWeek.toString(AmbientContext.current, false),
     onClick = onClick,
     onOffChange = onOffChange,
     onTimeClick = onTimeClick,

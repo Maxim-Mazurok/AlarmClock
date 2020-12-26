@@ -121,17 +121,18 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.0.0-alpha06"
+        kotlinCompilerExtensionVersion = "1.0.0-alpha09"
+        kotlinCompilerVersion = "1.4.21"
     }
 }
 
 // compose
 dependencies {
-    val compose = "1.0.0-alpha06"
+    val compose = "1.0.0-alpha09"
     implementation("androidx.compose.ui:ui:$compose")
     implementation("androidx.compose.foundation:foundation-layout:$compose")
     implementation("androidx.compose.material:material:$compose")
-    implementation("androidx.ui:ui-tooling:$compose")
+    implementation("androidx.compose.ui:ui-tooling:$compose")
 }
 
 dependencies {

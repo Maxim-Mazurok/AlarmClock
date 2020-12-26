@@ -13,7 +13,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun ColoredTheme(
   colors: Colors,
-  content: @Composable() () -> Unit
+  content: @Composable () -> Unit
 ) {
   MaterialTheme(
     colors = colors,

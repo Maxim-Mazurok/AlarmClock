@@ -1,5 +1,5 @@
 buildscript {
-    val kotlin = "1.4.0"
+    val kotlin = "1.4.21"
 
     allprojects {
         extra.apply {
@@ -14,7 +14,7 @@ buildscript {
     }
 
     dependencies {
-        classpath("com.android.tools.build:gradle:4.2.0-alpha15")
+        classpath("com.android.tools.build:gradle:7.0.0-alpha03")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin")
     }
 }
