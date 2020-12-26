@@ -34,7 +34,7 @@ fun themeColors() = listOf(
   ThemeColors("Dark", "dark", DarkColors),
   ThemeColors("DeusEx", "deus_ex", DeusExColors),
   ThemeColors("Synth", "synthwave", SynthwaveColors),
-  ThemeColors("G", "g", Gulasch),
+  // ThemeColors("G", "g", Gulasch),
 )
 
 fun String.toColors(): Colors {
