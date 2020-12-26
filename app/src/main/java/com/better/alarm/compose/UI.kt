@@ -29,9 +29,7 @@ fun AlarmsApp(
   alarms: Observable<List<AlarmValue>>,
   themeStore: RxDataStore<String>,
 ) {
-  val colors = themeStore.observe()
-    .map { it.toColors()  }
-    .toStateBlocking()
+  val colors = rememberRxStateBlocking { themeStore.observe().map { it.toColors() } }
 
   ColoredTheme(colors.value) {
     SharedElementsRoot {

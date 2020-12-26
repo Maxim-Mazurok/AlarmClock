@@ -69,10 +69,15 @@ fun Picker(
 
   @Composable
   fun enabled(key: TimePickerPresenter.Key): State<Boolean> {
-    return presenter.state.map { it.enabled.contains(key) }.toStateBlocking()
+    return rememberRxStateBlocking {
+      presenter.state.map { it.enabled.contains(key) }
+    }
   }
 
-  val state: State<String> = presenter.state.map { it.asString() }.toState("--:--")
+  val state: State<String> = rememberRxState(initial = "--:--") {
+    presenter.state.map { it.asString() }
+  }
+
   Column(modifier = Modifier.fillMaxSize()) {
     Row(
       modifier = Modifier.fillMaxWidth().weight(1f)

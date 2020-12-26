@@ -133,7 +133,7 @@ private fun AlarmsList(
   alarms: Observable<List<AlarmValue>>,
   layout: LayoutType,
 ) {
-  val data = alarms.toState(initial = emptyList())
+  val data = rememberRxState(emptyList()) { alarms }
   LazyColumn(modifier = Modifier
     .fillMaxSize()
     .sidePadding()
