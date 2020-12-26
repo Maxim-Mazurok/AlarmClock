@@ -38,6 +38,8 @@ import kotlin.properties.Delegates
 
 enum class SharedElementType { FROM, TO }
 
+private val disable = true
+
 /**
  * Copied from here: https://github.com/vanpra/compose-shared-element
  */
@@ -49,6 +51,10 @@ fun SharedElement(
   placeholder: @Composable (() -> Unit)? = null,
   children: @Composable () -> Unit,
 ) {
+  if (disable) {
+    children()
+    return
+  }
   val elementInfo = SharedElementInfo(tag, type)
   val rootState = AmbientSharedElementsRootState.current
 
