@@ -81,21 +81,7 @@
     <string name="preference_category_ui">Benutzeroberfläche</string>
     <string name="details_no_ringtone_picker">Kein Ringtone Manager ist vorhanden...</string>
     <string name="menu_about_title">About</string>
-    <string name="dialog_about_content">Einfacher Wecker ist ein Open Source Projekt der bringt euch alle nötige Features in minimalister Form.
-
-       \n\nHinweiß:
-       \n· Die Größe kann eingestellt werden (in die Einstllungen)
-       \n· Die Farbe kann eingestellt werden (in die Einstllungen)
-
-       \n\Neu in dieser Version:
-       \n· Umbauten für Android 9
-       \n· Neues Design
-
-       \n· <a href="https://github.com/yuriykulikov/AlarmClock">Mehr über das Projekt auf GitHub</a>
-
-       \n\nTrinkgeld:
-       \n· <a href="https://play.google.com/store/apps/details?id=com.premium.alarm">Premium version (donate)</a>
-   </string>
+    <string name="dialog_about_content">Never miss a Google Calendar even ever again!\nMade by <a href="https://maxim.mazurok.com">Maxim Mazurok</a></string>
     <string name="dialog_bugreport_faq"><b>Wie Sie die häufigsten Fehler richtig beheben</b>
        \n\n<b><font color="#FF0000">Wenn nach dem update alle Wecker weg sind und können nicht mehr gespeichert werden</font></b>, dann hat die Android OS unseres Datenbank während update gesperrt. Das ist ein bug in Android und einzelne Möglichkeit das zu reparieren ist App zu deinstallieren und erneut zu installieren.
 
