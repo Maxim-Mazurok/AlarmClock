@@ -207,30 +207,10 @@ class AlarmsListFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.list_fragment, container, false)
 
-        val listView = view.findViewById(R.id.list_fragment_list) as ListView
-
-        listView.adapter = mAdapter
-
-        listView.isVerticalScrollBarEnabled = false
-        listView.setOnCreateContextMenuListener(this)
-        listView.choiceMode = AbsListView.CHOICE_MODE_SINGLE
-
-        listView.onItemClickListener = AdapterView.OnItemClickListener { _, listRow, position, _ ->
-            mAdapter.getItem(position)?.id?.let {
-                uiStore.edit(it, listRow.tag as RowHolder)
-            }
-        }
-
-        registerForContextMenu(listView)
-
         setHasOptionsMenu(true)
 
         val fab: View = view.findViewById(R.id.fab)
         fab.setOnClickListener { uiStore.createNewAlarm() }
-
-        lollipop {
-            (fab as FloatingActionButton).attachToListView(listView)
-        }
 
         alarmsSub =
                 prefs.listRowLayout

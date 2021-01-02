@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    kotlin("plugin.serialization") version "1.4.10"
     jacoco
 }
 
@@ -132,6 +133,9 @@ dependencies {
     implementation("org.koin:koin-core:2.1.5")
     implementation("androidx.fragment:fragment:1.2.5")
     implementation("androidx.preference:preference:1.1.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1")
+    implementation("androidx.work:work-runtime-ktx:2.4.0")
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
 }
 
 dependencies {

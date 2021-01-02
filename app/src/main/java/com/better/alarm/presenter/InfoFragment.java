@@ -96,18 +96,7 @@ public class InfoFragment extends Fragment implements ViewFactory {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.info_fragment, container, false);
-        textView = (TextSwitcher) view.findViewById(R.id.info_fragment_text_view);
-        remainingTime = (TextSwitcher) view.findViewById(R.id.info_fragment_text_view_remaining_time);
 
-        textView.setFactory(this);
-        remainingTime.setFactory(this);
-
-        Animation in = AnimationUtils.loadAnimation(getActivity(), android.R.anim.fade_in);
-        Animation out = AnimationUtils.loadAnimation(getActivity(), android.R.anim.fade_out);
-        textView.setInAnimation(in);
-        textView.setOutAnimation(out);
-        remainingTime.setInAnimation(in);
-        remainingTime.setOutAnimation(out);
         getActivity().registerReceiver(mTickReceiver, new IntentFilter(Intent.ACTION_TIME_TICK));
         nextDisposable = store.next().subscribe(new AlarmChangedReceiver());
         return view;

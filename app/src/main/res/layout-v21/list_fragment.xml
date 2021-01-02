@@ -27,17 +27,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ListView
-            android:id="@+id/list_fragment_list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_weight="1"
-            tools:layout="@layout/list_fragment"
-            tools:listitem="@layout/list_row_classic" />
-
         <View
             android:layout_width="match_parent"
             android:layout_height="?android:attr/actionBarSize" />
@@ -55,16 +44,7 @@
             android:layout_height="?android:attr/actionBarSize"
             android:layout_alignParentBottom="true"
             android:background="?android:attr/colorBackground"
-            android:elevation="25dp">
-
-            <fragment
-                android:id="@+id/list_activity_info_fragment"
-                android:name="com.better.alarm.presenter.InfoFragment"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#00000000"
-                tools:layout="@layout/info_fragment" />
-        </FrameLayout>
+            android:elevation="25dp"/>
 
         <com.melnykov.fab.FloatingActionButton
             android:id="@+id/fab"
