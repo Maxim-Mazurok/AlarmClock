@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.better.alarm.presenter
+package com.mazurok.maxim.calendaralarm.presenter
 
 import android.annotation.SuppressLint
 import android.annotation.TargetApi
@@ -32,22 +32,22 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
-import com.better.alarm.BuildConfig
-import com.better.alarm.NotificationSettings
-import com.better.alarm.R
-import com.better.alarm.checkPermissions
-import com.better.alarm.configuration.EditedAlarm
-import com.better.alarm.configuration.Store
-import com.better.alarm.configuration.globalGet
-import com.better.alarm.configuration.globalInject
-import com.better.alarm.configuration.globalLogger
-import com.better.alarm.interfaces.IAlarmsManager
-import com.better.alarm.logger.Logger
-import com.better.alarm.lollipop
-import com.better.alarm.model.AlarmValue
-import com.better.alarm.model.Alarmtone
-import com.better.alarm.model.DaysOfWeek
-import com.better.alarm.util.Optional
+import com.mazurok.maxim.calendaralarm.BuildConfig
+import com.mazurok.maxim.calendaralarm.NotificationSettings
+import com.mazurok.maxim.calendaralarm.R
+import com.mazurok.maxim.calendaralarm.checkPermissions
+import com.mazurok.maxim.calendaralarm.configuration.EditedAlarm
+import com.mazurok.maxim.calendaralarm.configuration.Store
+import com.mazurok.maxim.calendaralarm.configuration.globalGet
+import com.mazurok.maxim.calendaralarm.configuration.globalInject
+import com.mazurok.maxim.calendaralarm.configuration.globalLogger
+import com.mazurok.maxim.calendaralarm.interfaces.IAlarmsManager
+import com.mazurok.maxim.calendaralarm.logger.Logger
+import com.mazurok.maxim.calendaralarm.lollipop
+import com.mazurok.maxim.calendaralarm.model.AlarmValue
+import com.mazurok.maxim.calendaralarm.model.Alarmtone
+import com.mazurok.maxim.calendaralarm.model.DaysOfWeek
+import com.mazurok.maxim.calendaralarm.util.Optional
 import io.reactivex.annotations.NonNull
 import io.reactivex.disposables.Disposables
 import io.reactivex.functions.Consumer

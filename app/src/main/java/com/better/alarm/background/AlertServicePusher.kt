@@ -1,15 +1,15 @@
-package com.better.alarm.background
+package com.mazurok.maxim.calendaralarm.background
 
 import android.content.Context
 import android.content.Intent
-import com.better.alarm.configuration.Store
-import com.better.alarm.interfaces.Intents
-import com.better.alarm.logger.Logger
-import com.better.alarm.oreo
-import com.better.alarm.preOreo
-import com.better.alarm.util.mapNotNull
-import com.better.alarm.util.subscribeForever
-import com.better.alarm.wakelock.WakeLockManager
+import com.mazurok.maxim.calendaralarm.configuration.Store
+import com.mazurok.maxim.calendaralarm.interfaces.Intents
+import com.mazurok.maxim.calendaralarm.logger.Logger
+import com.mazurok.maxim.calendaralarm.oreo
+import com.mazurok.maxim.calendaralarm.preOreo
+import com.mazurok.maxim.calendaralarm.util.mapNotNull
+import com.mazurok.maxim.calendaralarm.util.subscribeForever
+import com.mazurok.maxim.calendaralarm.wakelock.WakeLockManager
 
 class AlertServicePusher(store: Store, context: Context, wm: WakeLockManager, logger: Logger) {
     init {

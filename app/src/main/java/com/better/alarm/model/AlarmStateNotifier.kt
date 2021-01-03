@@ -1,9 +1,9 @@
-package com.better.alarm.model
+package com.mazurok.maxim.calendaralarm.model
 
-import com.better.alarm.background.Event
-import com.better.alarm.configuration.Store
-import com.better.alarm.interfaces.Intents
-import com.better.alarm.model.AlarmCore.IStateNotifier
+import com.mazurok.maxim.calendaralarm.background.Event
+import com.mazurok.maxim.calendaralarm.configuration.Store
+import com.mazurok.maxim.calendaralarm.interfaces.Intents
+import com.mazurok.maxim.calendaralarm.model.AlarmCore.IStateNotifier
 import java.util.Calendar
 
 /**

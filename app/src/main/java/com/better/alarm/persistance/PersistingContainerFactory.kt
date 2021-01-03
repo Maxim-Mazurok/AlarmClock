@@ -1,16 +1,16 @@
-package com.better.alarm.persistance
+package com.mazurok.maxim.calendaralarm.persistance
 
 import android.content.ContentUris
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.net.Uri
-import com.better.alarm.model.AlarmStore
-import com.better.alarm.model.AlarmValue
-import com.better.alarm.model.Alarmtone
-import com.better.alarm.model.Calendars
-import com.better.alarm.model.ContainerFactory
-import com.better.alarm.model.DaysOfWeek
+import com.mazurok.maxim.calendaralarm.model.AlarmStore
+import com.mazurok.maxim.calendaralarm.model.AlarmValue
+import com.mazurok.maxim.calendaralarm.model.Alarmtone
+import com.mazurok.maxim.calendaralarm.model.Calendars
+import com.mazurok.maxim.calendaralarm.model.ContainerFactory
+import com.mazurok.maxim.calendaralarm.model.DaysOfWeek
 import io.reactivex.Observable
 import io.reactivex.disposables.Disposable
 import io.reactivex.subjects.BehaviorSubject

@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.better.alarm.alert
+package com.mazurok.maxim.calendaralarm.alert
 
 import android.app.Notification
 import android.app.NotificationManager
@@ -24,17 +24,17 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.text.format.DateFormat
-import com.better.alarm.CHANNEL_ID
-import com.better.alarm.R
-import com.better.alarm.background.Event
-import com.better.alarm.configuration.Prefs
-import com.better.alarm.configuration.Store
-import com.better.alarm.interfaces.IAlarmsManager
-import com.better.alarm.interfaces.Intents
-import com.better.alarm.interfaces.PresentationToModelIntents
-import com.better.alarm.notificationBuilder
-import com.better.alarm.presenter.TransparentActivity
-import com.better.alarm.util.subscribeForever
+import com.mazurok.maxim.calendaralarm.CHANNEL_ID
+import com.mazurok.maxim.calendaralarm.R
+import com.mazurok.maxim.calendaralarm.background.Event
+import com.mazurok.maxim.calendaralarm.configuration.Prefs
+import com.mazurok.maxim.calendaralarm.configuration.Store
+import com.mazurok.maxim.calendaralarm.interfaces.IAlarmsManager
+import com.mazurok.maxim.calendaralarm.interfaces.Intents
+import com.mazurok.maxim.calendaralarm.interfaces.PresentationToModelIntents
+import com.mazurok.maxim.calendaralarm.notificationBuilder
+import com.mazurok.maxim.calendaralarm.presenter.TransparentActivity
+import com.mazurok.maxim.calendaralarm.util.subscribeForever
 import java.util.Calendar
 
 /**

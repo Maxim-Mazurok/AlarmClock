@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.better.alarm.view
+package com.mazurok.maxim.calendaralarm.view
 
 import android.content.Context
 import android.content.Intent
@@ -29,15 +29,15 @@ import android.widget.SeekBar.OnSeekBarChangeListener
 import android.widget.TextView
 import androidx.preference.Preference
 import androidx.preference.PreferenceViewHolder
-import com.better.alarm.R
-import com.better.alarm.background.KlaxonPlugin
-import com.better.alarm.background.PluginAlarmData
-import com.better.alarm.background.TargetVolume
-import com.better.alarm.configuration.Prefs
-import com.better.alarm.configuration.Prefs.Companion.MAX_PREALARM_VOLUME
-import com.better.alarm.configuration.globalInject
-import com.better.alarm.configuration.globalLogger
-import com.better.alarm.model.Alarmtone
+import com.mazurok.maxim.calendaralarm.R
+import com.mazurok.maxim.calendaralarm.background.KlaxonPlugin
+import com.mazurok.maxim.calendaralarm.background.PluginAlarmData
+import com.mazurok.maxim.calendaralarm.background.TargetVolume
+import com.mazurok.maxim.calendaralarm.configuration.Prefs
+import com.mazurok.maxim.calendaralarm.configuration.Prefs.Companion.MAX_PREALARM_VOLUME
+import com.mazurok.maxim.calendaralarm.configuration.globalInject
+import com.mazurok.maxim.calendaralarm.configuration.globalLogger
+import com.mazurok.maxim.calendaralarm.model.Alarmtone
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable

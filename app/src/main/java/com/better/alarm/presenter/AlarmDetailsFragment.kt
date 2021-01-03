@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.better.alarm.presenter
+package com.mazurok.maxim.calendaralarm.presenter
 
 import android.annotation.TargetApi
 import android.content.Intent
@@ -37,22 +37,22 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.better.alarm.R
-import com.better.alarm.checkPermissions
-import com.better.alarm.configuration.Layout
-import com.better.alarm.configuration.Prefs
-import com.better.alarm.configuration.globalInject
-import com.better.alarm.configuration.globalLogger
-import com.better.alarm.interfaces.IAlarmsManager
-import com.better.alarm.logger.Logger
-import com.better.alarm.lollipop
-import com.better.alarm.model.AlarmValue
-import com.better.alarm.model.Alarmtone
-import com.better.alarm.model.ringtoneManagerString
-import com.better.alarm.util.Optional
-import com.better.alarm.util.modify
-import com.better.alarm.view.showDialog
-import com.better.alarm.view.summary
+import com.mazurok.maxim.calendaralarm.R
+import com.mazurok.maxim.calendaralarm.checkPermissions
+import com.mazurok.maxim.calendaralarm.configuration.Layout
+import com.mazurok.maxim.calendaralarm.configuration.Prefs
+import com.mazurok.maxim.calendaralarm.configuration.globalInject
+import com.mazurok.maxim.calendaralarm.configuration.globalLogger
+import com.mazurok.maxim.calendaralarm.interfaces.IAlarmsManager
+import com.mazurok.maxim.calendaralarm.logger.Logger
+import com.mazurok.maxim.calendaralarm.lollipop
+import com.mazurok.maxim.calendaralarm.model.AlarmValue
+import com.mazurok.maxim.calendaralarm.model.Alarmtone
+import com.mazurok.maxim.calendaralarm.model.ringtoneManagerString
+import com.mazurok.maxim.calendaralarm.util.Optional
+import com.mazurok.maxim.calendaralarm.util.modify
+import com.mazurok.maxim.calendaralarm.view.showDialog
+import com.mazurok.maxim.calendaralarm.view.summary
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable

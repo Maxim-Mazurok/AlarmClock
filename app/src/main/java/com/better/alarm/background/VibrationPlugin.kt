@@ -1,11 +1,11 @@
-package com.better.alarm.background
+package com.mazurok.maxim.calendaralarm.background
 
 import android.os.Build
 import android.os.VibrationEffect
 import android.os.Vibrator
-import com.better.alarm.logger.Logger
-import com.better.alarm.oreo
-import com.better.alarm.preOreo
+import com.mazurok.maxim.calendaralarm.logger.Logger
+import com.mazurok.maxim.calendaralarm.oreo
+import com.mazurok.maxim.calendaralarm.preOreo
 import io.reactivex.Observable
 import io.reactivex.Scheduler
 import io.reactivex.disposables.CompositeDisposable

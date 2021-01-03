@@ -1,11 +1,11 @@
-package com.better.alarm.presenter
+package com.mazurok.maxim.calendaralarm.presenter
 
 import android.view.View
 import android.widget.CompoundButton
 import android.widget.TextView
-import com.better.alarm.R
-import com.better.alarm.configuration.Layout
-import com.better.alarm.view.DigitalClock
+import com.mazurok.maxim.calendaralarm.R
+import com.mazurok.maxim.calendaralarm.configuration.Layout
+import com.mazurok.maxim.calendaralarm.view.DigitalClock
 
 /**
  * Created by Yuriy on 05.08.2017.

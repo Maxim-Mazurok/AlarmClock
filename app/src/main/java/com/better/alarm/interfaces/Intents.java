@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.better.alarm.interfaces;
+package com.mazurok.maxim.calendaralarm.interfaces;
 
-import com.better.alarm.BuildConfig;
+import com.mazurok.maxim.calendaralarm.BuildConfig;
 
 public interface Intents {
     /**

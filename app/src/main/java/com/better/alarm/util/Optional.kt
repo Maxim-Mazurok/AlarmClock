@@ -1,4 +1,4 @@
-package com.better.alarm.util
+package com.mazurok.maxim.calendaralarm.util
 
 data class Optional<T>(val of: T?) {
     fun isPresent(): Boolean = of != null

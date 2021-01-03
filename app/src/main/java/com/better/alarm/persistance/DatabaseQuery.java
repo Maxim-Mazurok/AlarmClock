@@ -1,10 +1,10 @@
-package com.better.alarm.persistance;
+package com.mazurok.maxim.calendaralarm.persistance;
 
 import android.content.ContentResolver;
 import android.database.Cursor;
 
-import com.better.alarm.model.AlarmStore;
-import com.better.alarm.model.ContainerFactory;
+import com.mazurok.maxim.calendaralarm.model.AlarmStore;
+import com.mazurok.maxim.calendaralarm.model.ContainerFactory;
 
 import org.reactivestreams.Publisher;
 

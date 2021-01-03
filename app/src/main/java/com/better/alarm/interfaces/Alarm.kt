@@ -1,7 +1,7 @@
-package com.better.alarm.interfaces
+package com.mazurok.maxim.calendaralarm.interfaces
 
-import com.better.alarm.model.AlarmValue
-import com.better.alarm.model.Alarmtone
+import com.mazurok.maxim.calendaralarm.model.AlarmValue
+import com.mazurok.maxim.calendaralarm.model.Alarmtone
 
 interface Alarm {
     fun enable(enable: Boolean)

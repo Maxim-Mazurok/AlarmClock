@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.better.alarm.wakelock
+package com.mazurok.maxim.calendaralarm.wakelock
 
 import android.app.Application
 import android.content.Intent
 import android.os.PowerManager
 import android.os.PowerManager.WakeLock
 
-import com.better.alarm.logger.Logger
+import com.mazurok.maxim.calendaralarm.logger.Logger
 import java.util.concurrent.CopyOnWriteArrayList
 import java.util.concurrent.atomic.AtomicInteger
 

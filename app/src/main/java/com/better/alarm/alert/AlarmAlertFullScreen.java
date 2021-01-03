@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.better.alarm.alert;
+package com.mazurok.maxim.calendaralarm.alert;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -31,19 +31,19 @@ import android.widget.TextView;
 
 import androidx.fragment.app.FragmentActivity;
 
-import com.better.alarm.R;
-import com.better.alarm.background.Event;
-import com.better.alarm.configuration.InjectKt;
-import com.better.alarm.configuration.Prefs;
-import com.better.alarm.configuration.Store;
-import com.better.alarm.interfaces.Alarm;
-import com.better.alarm.interfaces.IAlarmsManager;
-import com.better.alarm.interfaces.Intents;
-import com.better.alarm.logger.Logger;
-import com.better.alarm.presenter.DynamicThemeHandler;
-import com.better.alarm.presenter.PickedTime;
-import com.better.alarm.presenter.TimePickerDialogFragment;
-import com.better.alarm.util.Optional;
+import com.mazurok.maxim.calendaralarm.R;
+import com.mazurok.maxim.calendaralarm.background.Event;
+import com.mazurok.maxim.calendaralarm.configuration.InjectKt;
+import com.mazurok.maxim.calendaralarm.configuration.Prefs;
+import com.mazurok.maxim.calendaralarm.configuration.Store;
+import com.mazurok.maxim.calendaralarm.interfaces.Alarm;
+import com.mazurok.maxim.calendaralarm.interfaces.IAlarmsManager;
+import com.mazurok.maxim.calendaralarm.interfaces.Intents;
+import com.mazurok.maxim.calendaralarm.logger.Logger;
+import com.mazurok.maxim.calendaralarm.presenter.DynamicThemeHandler;
+import com.mazurok.maxim.calendaralarm.presenter.PickedTime;
+import com.mazurok.maxim.calendaralarm.presenter.TimePickerDialogFragment;
+import com.mazurok.maxim.calendaralarm.util.Optional;
 
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
@@ -51,8 +51,8 @@ import io.reactivex.disposables.Disposables;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Predicate;
 
-import static com.better.alarm.configuration.Prefs.LONGCLICK_DISMISS_DEFAULT;
-import static com.better.alarm.configuration.Prefs.LONGCLICK_DISMISS_KEY;
+import static com.mazurok.maxim.calendaralarm.configuration.Prefs.LONGCLICK_DISMISS_DEFAULT;
+import static com.mazurok.maxim.calendaralarm.configuration.Prefs.LONGCLICK_DISMISS_KEY;
 
 /**
  * Alarm Clock alarm alert: pops visible indicator and plays alarm tone. This

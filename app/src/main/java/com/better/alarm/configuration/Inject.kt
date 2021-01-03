@@ -1,6 +1,6 @@
-package com.better.alarm.configuration
+package com.mazurok.maxim.calendaralarm.configuration
 
-import com.better.alarm.logger.LoggerFactory
+import com.mazurok.maxim.calendaralarm.logger.LoggerFactory
 import org.koin.core.context.KoinContextHandler
 import org.koin.core.parameter.ParametersDefinition
 import org.koin.core.qualifier.Qualifier

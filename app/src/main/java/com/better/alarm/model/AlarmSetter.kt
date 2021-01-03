@@ -1,4 +1,4 @@
-package com.better.alarm.model
+package com.mazurok.maxim.calendaralarm.model
 
 import android.annotation.TargetApi
 import android.app.AlarmManager
@@ -6,8 +6,8 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import com.better.alarm.logger.Logger
-import com.better.alarm.presenter.AlarmsListActivity
+import com.mazurok.maxim.calendaralarm.logger.Logger
+import com.mazurok.maxim.calendaralarm.presenter.AlarmsListActivity
 import java.util.Calendar
 
 /**

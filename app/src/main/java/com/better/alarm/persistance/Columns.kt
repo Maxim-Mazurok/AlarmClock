@@ -1,9 +1,9 @@
-package com.better.alarm.persistance
+package com.mazurok.maxim.calendaralarm.persistance
 
 import android.net.Uri
 import android.provider.BaseColumns
 
-import com.better.alarm.BuildConfig
+import com.mazurok.maxim.calendaralarm.BuildConfig
 
 // ////////////////////////////
 // Column definitions

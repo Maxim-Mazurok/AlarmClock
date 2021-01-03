@@ -15,19 +15,19 @@
  * limitations under the License.
  */
 
-package com.better.alarm.presenter
+package com.mazurok.maxim.calendaralarm.presenter
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.provider.AlarmClock
-import com.better.alarm.configuration.Store
-import com.better.alarm.configuration.globalInject
-import com.better.alarm.configuration.globalLogger
-import com.better.alarm.interfaces.Alarm
-import com.better.alarm.interfaces.IAlarmsManager
-import com.better.alarm.interfaces.Intents
-import com.better.alarm.logger.Logger
+import com.mazurok.maxim.calendaralarm.configuration.Store
+import com.mazurok.maxim.calendaralarm.configuration.globalInject
+import com.mazurok.maxim.calendaralarm.configuration.globalLogger
+import com.mazurok.maxim.calendaralarm.interfaces.Alarm
+import com.mazurok.maxim.calendaralarm.interfaces.IAlarmsManager
+import com.mazurok.maxim.calendaralarm.interfaces.Intents
+import com.mazurok.maxim.calendaralarm.logger.Logger
 
 
 class HandleSetAlarm : Activity() {

@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package com.better.alarm.presenter;
+package com.mazurok.maxim.calendaralarm.presenter;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -28,10 +28,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.better.alarm.R;
-import com.better.alarm.configuration.InjectKt;
-import com.better.alarm.util.Optional;
-import com.better.alarm.view.TimePicker;
+import com.mazurok.maxim.calendaralarm.R;
+import com.mazurok.maxim.calendaralarm.configuration.InjectKt;
+import com.mazurok.maxim.calendaralarm.util.Optional;
+import com.mazurok.maxim.calendaralarm.view.TimePicker;
 
 import io.reactivex.Single;
 import io.reactivex.SingleEmitter;

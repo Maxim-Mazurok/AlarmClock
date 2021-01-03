@@ -1,4 +1,4 @@
-package com.better.alarm.util
+package com.mazurok.maxim.calendaralarm.util
 
 class Preconditions {
     companion object {

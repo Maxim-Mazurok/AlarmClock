@@ -13,22 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.better.alarm.configuration
+package com.mazurok.maxim.calendaralarm.configuration
 
 import android.app.Application
 import android.view.ViewConfiguration
 import androidx.preference.PreferenceManager
 import androidx.work.*
-import com.better.alarm.R
-import com.better.alarm.alert.BackgroundNotifications
-import com.better.alarm.background.AlertServicePusher
-import com.better.alarm.bugreports.BugReporter
-import com.better.alarm.createNotificationChannels
-import com.better.alarm.model.Alarms
-import com.better.alarm.model.AlarmsScheduler
-import com.better.alarm.presenter.ScheduledReceiver
-import com.better.alarm.presenter.ToastPresenter
-import com.better.alarm.workers.SyncEventsWorker
+import com.mazurok.maxim.calendaralarm.R
+import com.mazurok.maxim.calendaralarm.alert.BackgroundNotifications
+import com.mazurok.maxim.calendaralarm.background.AlertServicePusher
+import com.mazurok.maxim.calendaralarm.bugreports.BugReporter
+import com.mazurok.maxim.calendaralarm.createNotificationChannels
+import com.mazurok.maxim.calendaralarm.model.Alarms
+import com.mazurok.maxim.calendaralarm.model.AlarmsScheduler
+import com.mazurok.maxim.calendaralarm.presenter.ScheduledReceiver
+import com.mazurok.maxim.calendaralarm.presenter.ToastPresenter
+import com.mazurok.maxim.calendaralarm.workers.SyncEventsWorker
 import java.util.concurrent.TimeUnit
 
 

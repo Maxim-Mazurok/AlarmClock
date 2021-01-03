@@ -1,11 +1,11 @@
-package com.better.alarm
+package com.mazurok.maxim.calendaralarm
 
 import android.database.Cursor
-import com.better.alarm.model.AlarmStore
-import com.better.alarm.model.Calendars
-import com.better.alarm.model.ContainerFactory
-import com.better.alarm.persistance.PersistingContainerFactory
-import com.better.alarm.stores.InMemoryRxDataStoreFactory.Companion.inMemoryRxDataStore
+import com.mazurok.maxim.calendaralarm.model.AlarmStore
+import com.mazurok.maxim.calendaralarm.model.Calendars
+import com.mazurok.maxim.calendaralarm.model.ContainerFactory
+import com.mazurok.maxim.calendaralarm.persistance.PersistingContainerFactory
+import com.mazurok.maxim.calendaralarm.stores.InMemoryRxDataStoreFactory.Companion.inMemoryRxDataStore
 
 /**
  * Created by Yuriy on 25.06.2017.

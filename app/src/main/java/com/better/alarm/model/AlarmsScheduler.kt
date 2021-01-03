@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.better.alarm.model
+package com.mazurok.maxim.calendaralarm.model
 
-import com.better.alarm.BuildConfig
-import com.better.alarm.configuration.Prefs
-import com.better.alarm.configuration.Store
-import com.better.alarm.logger.Logger
-import com.better.alarm.util.Optional
+import com.mazurok.maxim.calendaralarm.BuildConfig
+import com.mazurok.maxim.calendaralarm.configuration.Prefs
+import com.mazurok.maxim.calendaralarm.configuration.Store
+import com.mazurok.maxim.calendaralarm.logger.Logger
+import com.mazurok.maxim.calendaralarm.util.Optional
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale

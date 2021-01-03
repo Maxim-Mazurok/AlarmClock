@@ -1,4 +1,4 @@
-package com.better.alarm
+package com.mazurok.maxim.calendaralarm
 
 import android.annotation.TargetApi
 import android.app.AlertDialog

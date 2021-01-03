@@ -1,6 +1,6 @@
-package com.better.alarm.presenter;
+package com.mazurok.maxim.calendaralarm.presenter;
 
-import com.better.alarm.configuration.EditedAlarm;
+import com.mazurok.maxim.calendaralarm.configuration.EditedAlarm;
 
 import io.reactivex.subjects.BehaviorSubject;
 import io.reactivex.subjects.PublishSubject;

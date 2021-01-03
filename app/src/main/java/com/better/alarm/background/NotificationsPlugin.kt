@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.better.alarm.background
+package com.mazurok.maxim.calendaralarm.background
 
 import android.app.Notification
 import android.app.NotificationManager
@@ -23,14 +23,14 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import androidx.core.app.NotificationCompat
-import com.better.alarm.CHANNEL_ID_HIGH_PRIO
-import com.better.alarm.R
-import com.better.alarm.alert.AlarmAlertFullScreen
-import com.better.alarm.interfaces.Intents
-import com.better.alarm.interfaces.PresentationToModelIntents
-import com.better.alarm.isOreo
-import com.better.alarm.logger.Logger
-import com.better.alarm.notificationBuilder
+import com.mazurok.maxim.calendaralarm.CHANNEL_ID_HIGH_PRIO
+import com.mazurok.maxim.calendaralarm.R
+import com.mazurok.maxim.calendaralarm.alert.AlarmAlertFullScreen
+import com.mazurok.maxim.calendaralarm.interfaces.Intents
+import com.mazurok.maxim.calendaralarm.interfaces.PresentationToModelIntents
+import com.mazurok.maxim.calendaralarm.isOreo
+import com.mazurok.maxim.calendaralarm.logger.Logger
+import com.mazurok.maxim.calendaralarm.notificationBuilder
 
 /**
  * Glue class: connects AlarmAlert IntentReceiver to AlarmAlert activity. Passes

@@ -1,7 +1,7 @@
-package com.better.alarm.model
+package com.mazurok.maxim.calendaralarm.model
 
 import android.content.Context
-import com.better.alarm.R
+import com.mazurok.maxim.calendaralarm.R
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 import org.mockito.Mockito.`when`

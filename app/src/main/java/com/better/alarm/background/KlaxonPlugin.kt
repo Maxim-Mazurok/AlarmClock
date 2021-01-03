@@ -1,8 +1,8 @@
-package com.better.alarm.background
+package com.mazurok.maxim.calendaralarm.background
 
-import com.better.alarm.R
-import com.better.alarm.logger.Logger
-import com.better.alarm.model.Alarmtone
+import com.mazurok.maxim.calendaralarm.R
+import com.mazurok.maxim.calendaralarm.logger.Logger
+import com.mazurok.maxim.calendaralarm.model.Alarmtone
 import io.reactivex.Observable
 import io.reactivex.Scheduler
 import io.reactivex.disposables.CompositeDisposable

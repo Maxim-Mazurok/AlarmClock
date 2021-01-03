@@ -1,4 +1,4 @@
-package com.better.alarm.model
+package com.mazurok.maxim.calendaralarm.model
 
 fun removeWithId(alarmValues: List<AlarmValue>, id: Int): List<AlarmValue> {
     return alarmValues.filter { it.id != id }

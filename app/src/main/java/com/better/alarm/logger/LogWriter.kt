@@ -1,2 +1,2 @@
-package com.better.alarm.logger
+package com.mazurok.maxim.calendaralarm.logger
 

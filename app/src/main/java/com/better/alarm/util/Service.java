@@ -1,4 +1,4 @@
-package com.better.alarm.util;
+package com.mazurok.maxim.calendaralarm.util;
 
 import android.content.Intent;
 import android.os.IBinder;
