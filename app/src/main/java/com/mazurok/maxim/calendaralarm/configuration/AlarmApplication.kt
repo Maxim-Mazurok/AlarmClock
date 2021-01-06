@@ -16,9 +16,13 @@
 package com.mazurok.maxim.calendaralarm.configuration
 
 import android.app.Application
+import android.util.Log
 import android.view.ViewConfiguration
+import android.widget.Toast
 import androidx.preference.PreferenceManager
 import androidx.work.*
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.messaging.FirebaseMessaging
 import com.mazurok.maxim.calendaralarm.R
 import com.mazurok.maxim.calendaralarm.alert.BackgroundNotifications
 import com.mazurok.maxim.calendaralarm.background.AlertServicePusher
@@ -46,6 +50,21 @@ class AlarmApplication : Application() {
         WorkManager
                 .getInstance(this)
                 .enqueue(uploadWorkRequest)
+
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+            if (!task.isSuccessful) {
+                Log.w("mytag", "Fetching FCM registration token failed", task.exception)
+                return@OnCompleteListener
+            }
+
+            // Get new FCM registration token
+            val token = task.result
+
+            // Log and toast
+            val msg = getString(R.string.msg_token_fmt, token)
+            Log.d("mytag", msg)
+            Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
+        })
 
         runCatching {
             ViewConfiguration::class.java

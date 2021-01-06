@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "195435927242",
+    "project_id": "calendar-alarm-300509",
+    "storage_bucket": "calendar-alarm-300509.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195435927242:android:ed2bf6434a40a3801a0633",
+        "android_client_info": {
+          "package_name": "com.mazurok.maxim.calendaralarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "195435927242-knl6h9nicakrkh73lp9r2gmtmpa2iuo8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAu5NtvGvdn-ongLl0h0j_s7pnSkzzqbg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "195435927242-knl6h9nicakrkh73lp9r2gmtmpa2iuo8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

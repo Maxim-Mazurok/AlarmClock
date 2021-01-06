@@ -27,6 +27,7 @@
     </string-array>
     <!-- Setting labels on Set alarm screen: Prealarm -->
     <string name="alarm_prealarm">Gentle pre-alarm</string>
+    <string name="msg_token_fmt" translatable="false">FCM registration Token: %s</string>
     <!-- Pre-alarm duration title -->
     <string name="prealarm_duration_title" tools:ignore="MissingTranslation">Pre-alarm duration</string>
     <!--

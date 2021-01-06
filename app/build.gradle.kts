@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    id("com.google.gms.google-services")
     kotlin("android")
     kotlin("plugin.serialization") version "1.4.10"
     jacoco
@@ -62,13 +63,13 @@ val acraEmail = project.rootProject.file("local.properties")
 version = "3.07.00"
 
 android {
-    compileSdkVersion(29)
+    compileSdkVersion(30)
     defaultConfig {
         versionCode = "$version".replace(".", "").toInt()
         versionName = "$version"
         applicationId = "com.mazurok.maxim.calendaralarm"
-        minSdkVersion(15)
-        targetSdkVersion(29)
+        minSdkVersion(16)
+        targetSdkVersion(30)
         testApplicationId = "com.mazurok.maxim.calendaralarm.test"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled = true
@@ -77,7 +78,7 @@ android {
         getByName("debug") {
             isTestCoverageEnabled = true
             buildConfigField("String", "ACRA_EMAIL", "\"$acraEmail\"")
-            applicationIdSuffix = ".debug"
+//            applicationIdSuffix = ".debug"
         }
         getByName("release") {
             isMinifyEnabled = false
@@ -136,6 +137,8 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1")
     implementation("androidx.work:work-runtime-ktx:2.4.0")
     implementation("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation(platform("com.google.firebase:firebase-bom:26.2.0"))
+    implementation("com.google.firebase:firebase-messaging-ktx")
 }
 
 dependencies {
