@@ -1,6 +1,6 @@
-package com.mazurok.maxim.calendaralarm.presenter;
+package com.better.alarm.presenter;
 
-import com.mazurok.maxim.calendaralarm.model.AlarmValue;
+import com.better.alarm.model.AlarmValue;
 
 import java.util.Comparator;
 

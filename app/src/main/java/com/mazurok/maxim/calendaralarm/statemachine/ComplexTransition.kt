@@ -1,4 +1,4 @@
-package com.mazurok.maxim.calendaralarm.statemachine
+package com.better.alarm.statemachine
 
 abstract class ComplexTransition<T> : State<T>() {
     abstract fun performComplexTransition()

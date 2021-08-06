@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.mazurok.maxim.calendaralarm.view;
+package com.better.alarm.view;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -29,9 +29,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.mazurok.maxim.calendaralarm.R;
-import com.mazurok.maxim.calendaralarm.configuration.InjectKt;
-import com.mazurok.maxim.calendaralarm.configuration.Prefs;
+import com.better.alarm.R;
+import com.better.alarm.configuration.InjectKt;
+import com.better.alarm.configuration.Prefs;
 
 import java.text.DateFormatSymbols;
 import java.util.Calendar;

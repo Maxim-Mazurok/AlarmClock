@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.mazurok.maxim.calendaralarm.view
+package com.better.alarm.view
 
 import android.content.Context
 import androidx.appcompat.app.AlertDialog
-import com.mazurok.maxim.calendaralarm.model.DaysOfWeek
+import com.better.alarm.model.DaysOfWeek
 import io.reactivex.Single
 import java.text.DateFormatSymbols
 import java.util.Calendar

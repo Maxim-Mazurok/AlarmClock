@@ -67,10 +67,10 @@ android {
     defaultConfig {
         versionCode = "$version".replace(".", "").toInt()
         versionName = "$version"
-        applicationId = "com.mazurok.maxim.calendaralarm"
+        applicationId = "com.better.alarm"
         minSdkVersion(16)
         targetSdkVersion(30)
-        testApplicationId = "com.mazurok.maxim.calendaralarm.test"
+        testApplicationId = "com.better.alarm.test"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled = true
     }
@@ -89,7 +89,7 @@ android {
     flavorDimensions("default")
     productFlavors {
         create("develop") {
-            applicationId = "com.mazurok.maxim.calendaralarm"
+            applicationId = "com.better.alarm"
         }
         create("premium") {
             applicationId = "com.premium.alarm"

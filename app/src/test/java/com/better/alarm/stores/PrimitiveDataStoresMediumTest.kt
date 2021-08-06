@@ -1,4 +1,4 @@
-package com.mazurok.maxim.calendaralarm.stores
+package com.better.alarm.stores
 
 import android.content.SharedPreferences
 import io.mockk.every

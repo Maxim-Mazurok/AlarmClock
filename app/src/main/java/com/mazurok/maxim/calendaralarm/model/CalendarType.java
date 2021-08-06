@@ -1,4 +1,4 @@
-package com.mazurok.maxim.calendaralarm.model;
+package com.better.alarm.model;
 
 public enum CalendarType {
     NORMAL, SNOOZE, PREALARM, AUTOSILENCE

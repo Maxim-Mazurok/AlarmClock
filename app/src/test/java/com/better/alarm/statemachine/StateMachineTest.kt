@@ -1,7 +1,7 @@
-package com.mazurok.maxim.calendaralarm.statemachine
+package com.better.alarm.statemachine
 
-import com.mazurok.maxim.calendaralarm.logger.Logger
-import com.mazurok.maxim.calendaralarm.logger.SysoutLogWriter
+import com.better.alarm.logger.Logger
+import com.better.alarm.logger.SysoutLogWriter
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 

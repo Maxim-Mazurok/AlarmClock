@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.mazurok.maxim.calendaralarm.model;
+package com.better.alarm.model;
 
 import java.util.Calendar;
 

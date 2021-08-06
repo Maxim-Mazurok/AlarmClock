@@ -1,4 +1,4 @@
-package com.mazurok.maxim.calendaralarm.presenter;
+package com.better.alarm.presenter;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -18,12 +18,12 @@ import android.widget.ViewSwitcher.ViewFactory;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.mazurok.maxim.calendaralarm.R;
-import com.mazurok.maxim.calendaralarm.configuration.InjectKt;
-import com.mazurok.maxim.calendaralarm.configuration.Prefs;
-import com.mazurok.maxim.calendaralarm.configuration.Store;
-import com.mazurok.maxim.calendaralarm.model.AlarmValue;
-import com.mazurok.maxim.calendaralarm.util.Optional;
+import com.better.alarm.R;
+import com.better.alarm.configuration.InjectKt;
+import com.better.alarm.configuration.Prefs;
+import com.better.alarm.configuration.Store;
+import com.better.alarm.model.AlarmValue;
+import com.better.alarm.util.Optional;
 
 import java.util.Calendar;
 

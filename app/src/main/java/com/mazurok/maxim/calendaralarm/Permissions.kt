@@ -1,4 +1,4 @@
-package com.mazurok.maxim.calendaralarm
+package com.better.alarm
 
 import android.Manifest
 import android.app.Activity
@@ -6,11 +6,11 @@ import android.app.AlertDialog
 import android.content.pm.PackageManager
 import android.media.RingtoneManager
 import android.os.Build
-import com.mazurok.maxim.calendaralarm.background.PlayerWrapper
-import com.mazurok.maxim.calendaralarm.configuration.globalLogger
-import com.mazurok.maxim.calendaralarm.logger.Logger
-import com.mazurok.maxim.calendaralarm.model.Alarmtone
-import com.mazurok.maxim.calendaralarm.model.ringtoneManagerString
+import com.better.alarm.background.PlayerWrapper
+import com.better.alarm.configuration.globalLogger
+import com.better.alarm.logger.Logger
+import com.better.alarm.model.Alarmtone
+import com.better.alarm.model.ringtoneManagerString
 
 /**
  * Checks if all ringtones can be played, and requests permissions if it is not the case

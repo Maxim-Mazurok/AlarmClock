@@ -1,8 +1,8 @@
-package com.mazurok.maxim.calendaralarm.logger
+package com.better.alarm.logger
 
 import android.util.Log
 
-import com.mazurok.maxim.calendaralarm.logger.Logger.LogLevel
+import com.better.alarm.logger.Logger.LogLevel
 
 class LogcatLogWriter private constructor() : LogWriter {
     override fun write(level: LogLevel, tag: String, message: String, e: Throwable?) {

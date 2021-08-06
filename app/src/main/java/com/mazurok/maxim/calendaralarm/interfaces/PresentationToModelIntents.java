@@ -1,11 +1,11 @@
-package com.mazurok.maxim.calendaralarm.interfaces;
+package com.better.alarm.interfaces;
 
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 
-import com.mazurok.maxim.calendaralarm.BuildConfig;
-import com.mazurok.maxim.calendaralarm.model.AlarmsReceiver;
+import com.better.alarm.BuildConfig;
+import com.better.alarm.model.AlarmsReceiver;
 
 public class PresentationToModelIntents {
 

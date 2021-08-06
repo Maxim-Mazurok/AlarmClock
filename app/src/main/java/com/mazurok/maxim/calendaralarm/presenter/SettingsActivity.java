@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.mazurok.maxim.calendaralarm.presenter;
+package com.better.alarm.presenter;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -26,8 +26,8 @@ import android.view.MenuItem;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.mazurok.maxim.calendaralarm.R;
-import com.mazurok.maxim.calendaralarm.configuration.InjectKt;
+import com.better.alarm.R;
+import com.better.alarm.configuration.InjectKt;
 
 /**
  * Settings for the Alarm Clock.

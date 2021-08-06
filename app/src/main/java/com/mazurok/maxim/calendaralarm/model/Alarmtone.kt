@@ -1,4 +1,4 @@
-package com.mazurok.maxim.calendaralarm.model
+package com.better.alarm.model
 
 import android.net.Uri
 import android.provider.Settings

@@ -1,10 +1,10 @@
-package com.mazurok.maxim.calendaralarm.presenter
+package com.better.alarm.presenter
 
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
-import com.mazurok.maxim.calendaralarm.R
-import com.mazurok.maxim.calendaralarm.alert.AlarmAlertFullScreen
+import com.better.alarm.R
+import com.better.alarm.alert.AlarmAlertFullScreen
 
 class DynamicThemeHandler(context: Context) {
     private val themeKey = "theme"

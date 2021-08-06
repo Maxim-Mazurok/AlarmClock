@@ -1,4 +1,4 @@
-package com.mazurok.maxim.calendaralarm
+package com.better.alarm
 
 import android.app.NotificationChannel
 import android.app.NotificationManager

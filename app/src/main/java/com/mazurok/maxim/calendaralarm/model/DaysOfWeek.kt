@@ -1,7 +1,7 @@
-package com.mazurok.maxim.calendaralarm.model
+package com.better.alarm.model
 
 import android.content.Context
-import com.mazurok.maxim.calendaralarm.R
+import com.better.alarm.R
 import java.text.DateFormatSymbols
 import java.util.Calendar
 

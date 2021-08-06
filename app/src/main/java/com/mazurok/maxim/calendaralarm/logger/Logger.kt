@@ -1,4 +1,4 @@
-package com.mazurok.maxim.calendaralarm.logger
+package com.better.alarm.logger
 
 /**
  * Log writing strategy

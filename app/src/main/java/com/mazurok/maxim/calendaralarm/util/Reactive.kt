@@ -1,4 +1,4 @@
-package com.mazurok.maxim.calendaralarm.util
+package com.better.alarm.util
 
 import io.reactivex.Observable
 import io.reactivex.Single

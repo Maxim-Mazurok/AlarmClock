@@ -1,8 +1,8 @@
-package com.mazurok.maxim.calendaralarm.model
+package com.better.alarm.model
 
-import com.mazurok.maxim.calendaralarm.configuration.Prefs
-import com.mazurok.maxim.calendaralarm.configuration.Store
-import com.mazurok.maxim.calendaralarm.logger.Logger
+import com.better.alarm.configuration.Prefs
+import com.better.alarm.configuration.Store
+import com.better.alarm.logger.Logger
 
 /**
  * Created by Yuriy on 09.08.2017.

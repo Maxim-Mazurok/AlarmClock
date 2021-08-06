@@ -1,4 +1,4 @@
-package com.mazurok.maxim.calendaralarm.background
+package com.better.alarm.background
 
 import android.content.Context
 import android.content.res.Resources
@@ -6,8 +6,8 @@ import android.media.AudioManager
 import android.media.MediaPlayer
 import android.media.RingtoneManager
 import android.net.Uri
-import com.mazurok.maxim.calendaralarm.logger.Logger
-import com.mazurok.maxim.calendaralarm.model.Alarmtone
+import com.better.alarm.logger.Logger
+import com.better.alarm.model.Alarmtone
 
 class PlayerWrapper(
         val resources: Resources,

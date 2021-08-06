@@ -1,11 +1,11 @@
-package com.mazurok.maxim.calendaralarm.workers
+package com.better.alarm.workers
 
 import android.content.Context
 import android.util.Log
 import androidx.work.Worker
 import androidx.work.WorkerParameters
-import com.mazurok.maxim.calendaralarm.configuration.globalInject
-import com.mazurok.maxim.calendaralarm.interfaces.IAlarmsManager
+import com.better.alarm.configuration.globalInject
+import com.better.alarm.interfaces.IAlarmsManager
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json

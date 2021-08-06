@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.mazurok.maxim.calendaralarm.model;
+package com.better.alarm.model;
 
 import android.annotation.SuppressLint;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.mazurok.maxim.calendaralarm.interfaces.Alarm;
-import com.mazurok.maxim.calendaralarm.interfaces.IAlarmsManager;
-import com.mazurok.maxim.calendaralarm.logger.Logger;
-import com.mazurok.maxim.calendaralarm.persistance.DatabaseQuery;
+import com.better.alarm.interfaces.Alarm;
+import com.better.alarm.interfaces.IAlarmsManager;
+import com.better.alarm.logger.Logger;
+import com.better.alarm.persistance.DatabaseQuery;
 
 import java.util.HashMap;
 import java.util.List;

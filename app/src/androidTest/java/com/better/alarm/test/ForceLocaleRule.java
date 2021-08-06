@@ -1,4 +1,4 @@
-package com.mazurok.maxim.calendaralarm.test;
+package com.better.alarm.test;
 
 import android.content.res.Configuration;
 import android.content.res.Resources;

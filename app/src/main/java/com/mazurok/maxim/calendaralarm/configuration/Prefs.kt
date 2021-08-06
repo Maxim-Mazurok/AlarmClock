@@ -1,9 +1,9 @@
-package com.mazurok.maxim.calendaralarm.configuration
+package com.better.alarm.configuration
 
-import com.mazurok.maxim.calendaralarm.lollipop
-import com.mazurok.maxim.calendaralarm.stores.PrimitiveDataStoreFactory
-import com.mazurok.maxim.calendaralarm.stores.RxDataStore
-import com.mazurok.maxim.calendaralarm.stores.intStringDataStore
+import com.better.alarm.lollipop
+import com.better.alarm.stores.PrimitiveDataStoreFactory
+import com.better.alarm.stores.RxDataStore
+import com.better.alarm.stores.intStringDataStore
 import io.reactivex.Single
 
 /**

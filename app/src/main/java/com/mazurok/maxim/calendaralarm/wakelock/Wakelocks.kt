@@ -1,4 +1,4 @@
-package com.mazurok.maxim.calendaralarm.wakelock
+package com.better.alarm.wakelock
 
 interface Wakelocks {
     fun acquireServiceLock()

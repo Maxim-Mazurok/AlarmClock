@@ -1,7 +1,7 @@
-package com.mazurok.maxim.calendaralarm
+package com.better.alarm
 
-import com.mazurok.maxim.calendaralarm.view.TimePickerPresenter
-import com.mazurok.maxim.calendaralarm.view.TimePickerPresenter.Key
+import com.better.alarm.view.TimePickerPresenter
+import com.better.alarm.view.TimePickerPresenter.Key
 import org.assertj.core.api.KotlinAssertions.assertThat
 import org.junit.Rule
 import org.junit.Test

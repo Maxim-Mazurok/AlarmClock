@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package com.mazurok.maxim.calendaralarm.view;
+package com.better.alarm.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -22,7 +22,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.mazurok.maxim.calendaralarm.R;
+import com.better.alarm.R;
 
 /**
  * @author Yuriy
