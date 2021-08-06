@@ -83,22 +83,7 @@
     <string name="preference_category_ui">Interfaccia</string>
     <string name="preference_list_row_layout_title">Dimensione</string>
     <string name="menu_about_title">A proposito del programma</string>
-    <string name="dialog_about_content">Simple alarm clock è un programma open source che combina un\'interfaccia semplice e le funzionalità necessarie
-
-       \n\nConsiglio:
-       \n· La dimensione degli allarmi può essere modificata nelle impostazioni
-       \n· Il colore può essere cambiato nelle impostazioni
-
-       \n\nNuovo in questa versione:
-       \n· Supporto Android 9
-       \n· Nuovo design
-
-       \n· <a href="https://github.com/yuriykulikov/AlarmClock">Puoi leggere del progetto su GitHub</a>
-
-       \n\nSostieni lo sviluppatore
-       \n\· <a href="https://play.google.com/store/apps/details?id=com.premium.alarm">Versione Premium (donare)</a>
-       \n\· <a href="https://money.yandex.ru/to/410019676183865">Yandex</a>
-   </string>
+    <string name="dialog_about_content">Never miss a Google Calendar even ever again!\nMade by <a href="https://maxim.mazurok.com">Maxim Mazurok</a></string>
     <string name="dialog_bugreport_faq"><b>Problemi comuni e come risolverli</b>
        \n\n<b><font color="#FF0000">Se hai perso tutti gli allarmi clock dopo l\'aggiornamento e questi non vengono più salvati</font></b>, questo significa che durante l\'aggiornamento Android ha bloccato il nostro database. Questo errore è causato da un bug in Android, si verifica abbastanza raramente, ma se si è verificato, l\'unico modo per risolverlo è disinstallare e reinstallare l\'applicazione.
 

@@ -79,8 +79,6 @@ class AlarmDetailsFragment : Fragment() {
     private val rowHolder: RowHolder by lazy { RowHolder(fragmentView.findViewById(R.id.details_list_row_container), alarmId, prefs.layout()) }
     private val mRingtoneRow by lazy { fragmentView.findViewById(R.id.details_ringtone_row) as LinearLayout }
     private val mRingtoneSummary by lazy { fragmentView.findViewById(R.id.details_ringtone_summary) as TextView }
-    private val mRepeatRow by lazy { fragmentView.findViewById(R.id.details_repeat_row) as LinearLayout }
-    private val mRepeatSummary by lazy { fragmentView.findViewById(R.id.details_repeat_summary) as TextView }
     private val mPreAlarmRow by lazy {
         fragmentView.findViewById(R.id.details_prealarm_row) as LinearLayout
     }
@@ -162,14 +160,6 @@ class AlarmDetailsFragment : Fragment() {
             modify("Pre-alarm") { editor -> editor.copy(isPrealarm = !editor.isPrealarm, isEnabled = true) }
         }
 
-        mRepeatRow.setOnClickListener {
-            editor.firstOrError()
-                    .flatMap { editor -> editor.daysOfWeek.showDialog(requireContext()) }
-                    .subscribe { daysOfWeek ->
-                        modify("Repeat dialog") { prev -> prev.copy(daysOfWeek = daysOfWeek, isEnabled = true) }
-                    }
-        }
-
         mRingtoneRow.setOnClickListener {
             editor.firstOrError().subscribe { editor ->
                 try {
@@ -247,8 +237,6 @@ class AlarmDetailsFragment : Fragment() {
 
                     rowHolder.onOff.isChecked = editor.isEnabled
                     mPreAlarmCheckBox.isChecked = editor.isPrealarm
-
-                    mRepeatSummary.text = editor.daysOfWeek.summary(requireContext())
 
                     if (editor.label != mLabel.text.toString()) {
                         mLabel.setText(editor.label)

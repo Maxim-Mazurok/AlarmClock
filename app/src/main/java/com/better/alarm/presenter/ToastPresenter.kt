@@ -18,10 +18,12 @@
 package com.better.alarm.presenter
 
 import android.content.Context
+import android.util.Log
 import android.widget.Toast
 import com.better.alarm.R
 import com.better.alarm.configuration.Store
 import com.better.alarm.model.AlarmValue
+import java.lang.Exception
 
 class ToastPresenter(private val store: Store, private val context: Context) {
     private var sToast: Toast? = null
@@ -29,7 +31,11 @@ class ToastPresenter(private val store: Store, private val context: Context) {
     fun start() {
         store.sets().subscribe { (alarm: AlarmValue, millis: Long) ->
             if (alarm.isEnabled) {
-                popAlarmSetToast(context, millis)
+                try {
+                    popAlarmSetToast(context, millis)
+                } catch (e: Exception) {
+                    Log.d("CalAlarm", "Not showing toast, because alarm was set from background worker")
+                }
             }
         }
     }

@@ -16,8 +16,13 @@
 package com.better.alarm.configuration
 
 import android.app.Application
+import android.util.Log
 import android.view.ViewConfiguration
+import android.widget.Toast
 import androidx.preference.PreferenceManager
+import androidx.work.*
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.messaging.FirebaseMessaging
 import com.better.alarm.R
 import com.better.alarm.alert.BackgroundNotifications
 import com.better.alarm.background.AlertServicePusher
@@ -27,9 +32,40 @@ import com.better.alarm.model.Alarms
 import com.better.alarm.model.AlarmsScheduler
 import com.better.alarm.presenter.ScheduledReceiver
 import com.better.alarm.presenter.ToastPresenter
+import com.better.alarm.workers.SyncEventsWorker
+import java.util.concurrent.TimeUnit
+
 
 class AlarmApplication : Application() {
     override fun onCreate() {
+        val constraintsBuilder: Constraints.Builder = Constraints.Builder()
+        constraintsBuilder.setRequiredNetworkType(NetworkType.CONNECTED)
+        val constraints: Constraints = constraintsBuilder.build()
+
+        val uploadWorkRequest: WorkRequest =
+                PeriodicWorkRequestBuilder<SyncEventsWorker>(PeriodicWorkRequest.MIN_PERIODIC_INTERVAL_MILLIS, TimeUnit.MILLISECONDS)
+                        .setConstraints(constraints)
+                        .build()
+
+        WorkManager
+                .getInstance(this)
+                .enqueue(uploadWorkRequest)
+
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+            if (!task.isSuccessful) {
+                Log.w("mytag", "Fetching FCM registration token failed", task.exception)
+                return@OnCompleteListener
+            }
+
+            // Get new FCM registration token
+            val token = task.result
+
+            // Log and toast
+            val msg = getString(R.string.msg_token_fmt, token)
+            Log.d("mytag", msg)
+            Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
+        })
+
         runCatching {
             ViewConfiguration::class.java
                     .getDeclaredField("sHasPermanentMenuKey")
