@@ -81,22 +81,7 @@
     <string name="preference_category_ui">Интерфейс</string>
     <string name="preference_list_row_layout_title">Размер</string>
     <string name="menu_about_title">О программе</string>
-    <string name="dialog_about_content">Простой будильник это программа с открытым исходным кодом, которая сочетает простой интерфейс и необходимые фичи
-
-       \n\nСовет:
-       \n· Размер будильников можно менять в настройках
-       \n· Цвет можно менять в настройках
-
-       \n\nНовое в этой версии:
-       \n· Поддержка Android 9
-       \n· Новый дизайн
-
-       \n· <a href="https://github.com/yuriykulikov/AlarmClock">Прочитать о проекте на GitHub</a>
-
-       \n\nПоддержать разработку
-       \n\· <a href="https://play.google.com/store/apps/details?id=com.premium.alarm">Премиум версия (донейт)</a>
-       \n\· <a href="https://money.yandex.ru/to/410019676183865">Yandex</a>
-   </string>
+    <string name="dialog_about_content">Больше не пропускайте события Гугл Календаря!\nСделал <a href="https://maxim.mazurok.com">Maxim Mazurok</a></string>
     <string name="dialog_bugreport_faq"><b>Общие проблемы и как их исправить</b>
        \n\n<b><font color="#FF0000">Если после обновления у вас пропали все будильники и они больше не сохраняются</font></b>, то, к большому сожалению, в ходу обновления Андроид заблокировал нашу базу данных. Эта ошибка вызвана багом в Андроиде, происходит довольно редко, но если это произошло, то единственный способ починить это - деинсталляция и повторная установка приложения.
 

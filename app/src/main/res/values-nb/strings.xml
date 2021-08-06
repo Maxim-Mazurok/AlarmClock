@@ -146,22 +146,7 @@
     <string name="details_no_ringtone_picker">Ingen ringetonetilbyder funnet...</string>
     <string name="permissions_external_storage_text">Det ser ut til at %s ikke kan spilles, sannsynligvis fordi en tillatelse kreves. Hvis du vil kan du gi tillatelsen. Alternativt, velg en annen lyd. Denne beslutningen kan endres i Systeminnstillinger.</string>
     <string name="menu_about_title">Om</string>
-    <string name="dialog_about_content">Simple Alarm Clock is an open source project which brings pure alarm experience to you by combining essential features and clean interface.
-
-       \n\nTip:
-       \n· Select layout size in settings
-       \n· Select color theme in settings
-
-       \n\nNew in this version:
-       \n· Fixes for Android 9
-       \n· New Design
-       \n· Select row size in settings
-
-       \n· <a href="https://github.com/yuriykulikov/AlarmClock">Learn more on GitHub</a>
-
-       \n\nSupport the app:
-       \n· <a href="https://play.google.com/store/apps/details?id=com.premium.alarm">Go premium</a>
-   </string>
+    <string name="dialog_about_content">Never miss a Google Calendar even ever again!\nMade by <a href="https://maxim.mazurok.com">Maxim Mazurok</a></string>
     <string name="dialog_bugreport_faq"><b>Common issues and how to fix them</b>
        \n\n<b><font color="#FF0000">If after the update all alarms disappeared and are not saved anymore</font></b>, it means that during the update Android has locked our database. It is a bug in Android OS and the only way to resolve this is to reinstall!
 

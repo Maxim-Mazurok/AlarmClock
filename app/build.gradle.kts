@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
+    id("com.google.gms.google-services")
     kotlin("android")
+    kotlin("plugin.serialization") version "1.4.10"
     jacoco
 }
 
@@ -61,7 +63,7 @@ val acraEmail = project.rootProject.file("local.properties")
 version = "3.07.00"
 
 android {
-    compileSdkVersion(29)
+    compileSdkVersion(30)
     defaultConfig {
         versionCode = "$version".replace(".", "").toInt()
         versionName = "$version"
@@ -76,7 +78,7 @@ android {
         getByName("debug") {
             isTestCoverageEnabled = true
             buildConfigField("String", "ACRA_EMAIL", "\"$acraEmail\"")
-            applicationIdSuffix = ".debug"
+//            applicationIdSuffix = ".debug"
         }
         getByName("release") {
             isMinifyEnabled = false
@@ -132,6 +134,11 @@ dependencies {
     implementation("org.koin:koin-core:2.1.5")
     implementation("androidx.fragment:fragment:1.2.5")
     implementation("androidx.preference:preference:1.1.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1")
+    implementation("androidx.work:work-runtime-ktx:2.4.0")
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation(platform("com.google.firebase:firebase-bom:26.2.0"))
+    implementation("com.google.firebase:firebase-messaging-ktx")
 }
 
 dependencies {

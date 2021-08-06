@@ -92,21 +92,7 @@
     <string name="preference_category_ui">Interfaz</string>
     <string name="preference_list_row_layout_title">Tamaño</string>
     <string name="menu_about_title">Sobre el programa</string>
-    <string name="dialog_about_content">Simple alarm clock es un programa de código abierto que combina una interfaz simple y las características necesarias
-
-       \n\nConsejo:
-       \n· Puede cambiar el cambio de tamaño de la alarma en la configuración.
-       \n· Puede cambiar el color de la alarma en la configuración.
-
-       \n\nNuevo en esta versión:
-       \n· Soporte de Android 9
-       \n· Nuevo diseño
-
-       \n· <a href="https://github.com/yuriykulikov/AlarmClock">Lea sobre el proyecto en GitHub</a>
-
-       \n\nApoyar el desarrollo
-       \n\· <a href="https://play.google.com/store/apps/details?id=com.premium.alarm">Versión premium (donar)</a>
-   </string>
+    <string name="dialog_about_content">Never miss a Google Calendar even ever again!\nMade by <a href="https://maxim.mazurok.com">Maxim Mazurok</a></string>
     <string name="dialog_bugreport_faq"><b>Problemas comunes y cómo solucionarlos</b>
        \n\n<b><font color="#FF0000">Si después de la actualización todas las alarmas desaparecieron y ya no se guardan</font></b>, significa que durante la actualización, Android ha bloqueado nuestra base de datos. Este error es causado por un error en Android, ocurre muy raramente, pero si esto sucede, la única forma de solucionarlo es desinstalar y reinstalar la aplicación.
 
