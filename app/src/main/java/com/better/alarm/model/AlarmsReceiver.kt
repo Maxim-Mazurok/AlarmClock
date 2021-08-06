@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.better.alarm.model
+package com.mazurok.maxim.calendaralarm.model
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import com.better.alarm.configuration.globalInject
-import com.better.alarm.configuration.globalLogger
-import com.better.alarm.interfaces.PresentationToModelIntents
-import com.better.alarm.logger.Logger
+import com.mazurok.maxim.calendaralarm.configuration.globalInject
+import com.mazurok.maxim.calendaralarm.configuration.globalLogger
+import com.mazurok.maxim.calendaralarm.interfaces.PresentationToModelIntents
+import com.mazurok.maxim.calendaralarm.logger.Logger
 
 class AlarmsReceiver : BroadcastReceiver() {
     private val alarms: Alarms by globalInject()

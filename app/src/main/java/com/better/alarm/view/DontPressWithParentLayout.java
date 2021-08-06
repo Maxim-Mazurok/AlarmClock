@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.better.alarm.view;
+package com.mazurok.maxim.calendaralarm.view;
 
 import android.content.Context;
 import android.util.AttributeSet;

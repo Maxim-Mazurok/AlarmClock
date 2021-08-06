@@ -1,4 +1,4 @@
-package com.better.alarm.test;
+package com.mazurok.maxim.calendaralarm.test;
 
 import android.content.Intent;
 import android.provider.AlarmClock;
@@ -6,20 +6,20 @@ import android.provider.AlarmClock;
 import androidx.test.rule.ActivityTestRule;
 import androidx.test.runner.AndroidJUnit4;
 
-import com.better.alarm.R;
-import com.better.alarm.alert.AlarmAlertFullScreen;
-import com.better.alarm.configuration.ContainerKt;
-import com.better.alarm.configuration.InjectKt;
-import com.better.alarm.configuration.Store;
-import com.better.alarm.interfaces.Intents;
-import com.better.alarm.model.AlarmSetter;
-import com.better.alarm.model.AlarmValue;
-import com.better.alarm.model.AlarmsReceiver;
-import com.better.alarm.model.CalendarType;
-import com.better.alarm.presenter.AlarmsListActivity;
-import com.better.alarm.presenter.HandleSetAlarm;
-import com.better.alarm.presenter.TransparentActivity;
-import com.better.alarm.util.Optional;
+import com.mazurok.maxim.calendaralarm.R;
+import com.mazurok.maxim.calendaralarm.alert.AlarmAlertFullScreen;
+import com.mazurok.maxim.calendaralarm.configuration.ContainerKt;
+import com.mazurok.maxim.calendaralarm.configuration.InjectKt;
+import com.mazurok.maxim.calendaralarm.configuration.Store;
+import com.mazurok.maxim.calendaralarm.interfaces.Intents;
+import com.mazurok.maxim.calendaralarm.model.AlarmSetter;
+import com.mazurok.maxim.calendaralarm.model.AlarmValue;
+import com.mazurok.maxim.calendaralarm.model.AlarmsReceiver;
+import com.mazurok.maxim.calendaralarm.model.CalendarType;
+import com.mazurok.maxim.calendaralarm.presenter.AlarmsListActivity;
+import com.mazurok.maxim.calendaralarm.presenter.HandleSetAlarm;
+import com.mazurok.maxim.calendaralarm.presenter.TransparentActivity;
+import com.mazurok.maxim.calendaralarm.util.Optional;
 
 import org.junit.Before;
 import org.junit.Ignore;

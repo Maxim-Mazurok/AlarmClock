@@ -1,14 +1,14 @@
-package com.better.alarm.test;
+package com.mazurok.maxim.calendaralarm.test;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
 import androidx.test.platform.app.InstrumentationRegistry;
 
-import com.better.alarm.R;
-import com.better.alarm.logger.Logger;
-import com.better.alarm.model.AlarmValue;
-import com.better.alarm.persistance.AlarmDatabaseHelper;
+import com.mazurok.maxim.calendaralarm.R;
+import com.mazurok.maxim.calendaralarm.logger.Logger;
+import com.mazurok.maxim.calendaralarm.model.AlarmValue;
+import com.mazurok.maxim.calendaralarm.persistance.AlarmDatabaseHelper;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -92,10 +92,10 @@ public class BaseTest {
     }
 
     protected void assertTimerView(String s) {
-        onView(withId(com.better.alarm.R.id.hours_tens)).check(matches(withText("" + s.charAt(0))));
-        onView(withId(com.better.alarm.R.id.hours_ones)).check(matches(withText("" + s.charAt(1))));
-        onView(withId(com.better.alarm.R.id.minutes_tens)).check(matches(withText("" + s.charAt(3))));
-        onView(withId(com.better.alarm.R.id.minutes_ones)).check(matches(withText("" + s.charAt(4))));
+        onView(withId(com.mazurok.maxim.calendaralarm.R.id.hours_tens)).check(matches(withText("" + s.charAt(0))));
+        onView(withId(com.mazurok.maxim.calendaralarm.R.id.hours_ones)).check(matches(withText("" + s.charAt(1))));
+        onView(withId(com.mazurok.maxim.calendaralarm.R.id.minutes_tens)).check(matches(withText("" + s.charAt(3))));
+        onView(withId(com.mazurok.maxim.calendaralarm.R.id.minutes_ones)).check(matches(withText("" + s.charAt(4))));
     }
 
     @androidx.annotation.NonNull

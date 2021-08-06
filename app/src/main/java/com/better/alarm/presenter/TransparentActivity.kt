@@ -1,8 +1,8 @@
-package com.better.alarm.presenter
+package com.mazurok.maxim.calendaralarm.presenter
 
-import com.better.alarm.configuration.globalInject
-import com.better.alarm.interfaces.IAlarmsManager
-import com.better.alarm.interfaces.Intents
+import com.mazurok.maxim.calendaralarm.configuration.globalInject
+import com.mazurok.maxim.calendaralarm.interfaces.IAlarmsManager
+import com.mazurok.maxim.calendaralarm.interfaces.Intents
 import io.reactivex.disposables.Disposables
 
 class TransparentActivity : androidx.fragment.app.FragmentActivity() {

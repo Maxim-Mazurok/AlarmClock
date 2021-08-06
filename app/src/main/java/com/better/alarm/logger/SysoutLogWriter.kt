@@ -1,6 +1,6 @@
-package com.better.alarm.logger
+package com.mazurok.maxim.calendaralarm.logger
 
-import com.better.alarm.logger.Logger.LogLevel
+import com.mazurok.maxim.calendaralarm.logger.Logger.LogLevel
 
 class SysoutLogWriter : LogWriter {
     override fun write(level: LogLevel, tag: String, message: String, e: Throwable?) {

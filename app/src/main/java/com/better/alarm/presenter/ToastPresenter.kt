@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package com.better.alarm.presenter
+package com.mazurok.maxim.calendaralarm.presenter
 
 import android.content.Context
 import android.widget.Toast
-import com.better.alarm.R
-import com.better.alarm.configuration.Store
-import com.better.alarm.model.AlarmValue
+import com.mazurok.maxim.calendaralarm.R
+import com.mazurok.maxim.calendaralarm.configuration.Store
+import com.mazurok.maxim.calendaralarm.model.AlarmValue
 
 class ToastPresenter(private val store: Store, private val context: Context) {
     private var sToast: Toast? = null

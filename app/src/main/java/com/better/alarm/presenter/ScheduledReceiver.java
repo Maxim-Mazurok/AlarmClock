@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.better.alarm.presenter;
+package com.mazurok.maxim.calendaralarm.presenter;
 
 import android.annotation.TargetApi;
 import android.app.AlarmManager;
@@ -24,10 +24,10 @@ import android.os.Build;
 import android.provider.Settings;
 import android.text.format.DateFormat;
 
-import com.better.alarm.configuration.Prefs;
-import com.better.alarm.configuration.Store;
-import com.better.alarm.interfaces.Intents;
-import com.better.alarm.util.Optional;
+import com.mazurok.maxim.calendaralarm.configuration.Prefs;
+import com.mazurok.maxim.calendaralarm.configuration.Store;
+import com.mazurok.maxim.calendaralarm.interfaces.Intents;
+import com.mazurok.maxim.calendaralarm.util.Optional;
 
 import java.util.Calendar;
 

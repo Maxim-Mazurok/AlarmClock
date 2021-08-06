@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-package com.better.alarm.model
+package com.mazurok.maxim.calendaralarm.model
 
-import com.better.alarm.BuildConfig
-import com.better.alarm.configuration.Prefs
-import com.better.alarm.configuration.Store
-import com.better.alarm.interfaces.Alarm
-import com.better.alarm.interfaces.Intents
-import com.better.alarm.logger.Logger
-import com.better.alarm.statemachine.ComplexTransition
-import com.better.alarm.statemachine.State
-import com.better.alarm.statemachine.StateMachine
-import com.better.alarm.stores.modify
+import com.mazurok.maxim.calendaralarm.BuildConfig
+import com.mazurok.maxim.calendaralarm.configuration.Prefs
+import com.mazurok.maxim.calendaralarm.configuration.Store
+import com.mazurok.maxim.calendaralarm.interfaces.Alarm
+import com.mazurok.maxim.calendaralarm.interfaces.Intents
+import com.mazurok.maxim.calendaralarm.logger.Logger
+import com.mazurok.maxim.calendaralarm.statemachine.ComplexTransition
+import com.mazurok.maxim.calendaralarm.statemachine.State
+import com.mazurok.maxim.calendaralarm.statemachine.StateMachine
+import com.mazurok.maxim.calendaralarm.stores.modify
 import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import java.text.DateFormat

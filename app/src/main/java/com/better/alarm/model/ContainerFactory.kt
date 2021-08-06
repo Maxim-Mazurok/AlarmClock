@@ -1,7 +1,7 @@
-package com.better.alarm.model
+package com.mazurok.maxim.calendaralarm.model
 
 import android.database.Cursor
-import com.better.alarm.stores.RxDataStore
+import com.mazurok.maxim.calendaralarm.stores.RxDataStore
 
 /**
  * Created by Yuriy on 24.06.2017.

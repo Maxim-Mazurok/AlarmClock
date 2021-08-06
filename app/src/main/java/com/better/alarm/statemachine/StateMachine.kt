@@ -21,9 +21,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.better.alarm.statemachine
+package com.mazurok.maxim.calendaralarm.statemachine
 
-import com.better.alarm.logger.Logger
+import com.mazurok.maxim.calendaralarm.logger.Logger
 import kotlin.properties.Delegates
 
 /**

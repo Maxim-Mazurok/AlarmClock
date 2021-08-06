@@ -1,8 +1,8 @@
-package com.better.alarm.configuration
+package com.mazurok.maxim.calendaralarm.configuration
 
-import com.better.alarm.model.AlarmValue
-import com.better.alarm.presenter.RowHolder
-import com.better.alarm.util.Optional
+import com.mazurok.maxim.calendaralarm.model.AlarmValue
+import com.mazurok.maxim.calendaralarm.presenter.RowHolder
+import com.mazurok.maxim.calendaralarm.util.Optional
 
 /**
  * Created by Yuriy on 09.08.2017.

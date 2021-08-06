@@ -1,11 +1,11 @@
-package com.better.alarm.bugreports
+package com.mazurok.maxim.calendaralarm.bugreports
 
 import android.app.Application
 import android.content.Context
-import com.better.alarm.BuildConfig
-import com.better.alarm.R
-import com.better.alarm.logger.Logger
-import com.better.alarm.logger.StartupLogWriter
+import com.mazurok.maxim.calendaralarm.BuildConfig
+import com.mazurok.maxim.calendaralarm.R
+import com.mazurok.maxim.calendaralarm.logger.Logger
+import com.mazurok.maxim.calendaralarm.logger.StartupLogWriter
 import org.acra.ACRA
 import org.acra.ReportField
 import org.acra.config.CoreConfigurationBuilder

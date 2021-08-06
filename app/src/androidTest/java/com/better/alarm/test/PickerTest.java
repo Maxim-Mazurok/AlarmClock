@@ -1,13 +1,13 @@
-package com.better.alarm.test;
+package com.mazurok.maxim.calendaralarm.test;
 
 
 import androidx.test.espresso.ViewInteraction;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.better.alarm.R;
-import com.better.alarm.configuration.ContainerKt;
-import com.better.alarm.presenter.AlarmsListActivity;
+import com.mazurok.maxim.calendaralarm.R;
+import com.mazurok.maxim.calendaralarm.configuration.ContainerKt;
+import com.mazurok.maxim.calendaralarm.presenter.AlarmsListActivity;
 
 import org.junit.After;
 import org.junit.Before;

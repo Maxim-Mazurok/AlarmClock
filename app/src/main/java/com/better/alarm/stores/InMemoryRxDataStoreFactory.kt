@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.better.alarm.stores
+package com.mazurok.maxim.calendaralarm.stores
 
 import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject

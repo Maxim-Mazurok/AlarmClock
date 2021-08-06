@@ -1,11 +1,11 @@
-package com.better.alarm
+package com.mazurok.maxim.calendaralarm
 
-import com.better.alarm.background.KlaxonPlugin
-import com.better.alarm.background.Player
-import com.better.alarm.background.PluginAlarmData
-import com.better.alarm.background.TargetVolume
-import com.better.alarm.logger.Logger
-import com.better.alarm.model.Alarmtone
+import com.mazurok.maxim.calendaralarm.background.KlaxonPlugin
+import com.mazurok.maxim.calendaralarm.background.Player
+import com.mazurok.maxim.calendaralarm.background.PluginAlarmData
+import com.mazurok.maxim.calendaralarm.background.TargetVolume
+import com.mazurok.maxim.calendaralarm.logger.Logger
+import com.mazurok.maxim.calendaralarm.model.Alarmtone
 import io.reactivex.Observable
 import io.reactivex.schedulers.TestScheduler
 import org.assertj.core.api.Assertions.assertThat

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.better.alarm.persistance;
+package com.mazurok.maxim.calendaralarm.persistance;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
@@ -27,9 +27,9 @@ import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 import android.text.TextUtils;
 
-import com.better.alarm.BuildConfig;
-import com.better.alarm.logger.Logger;
-import com.better.alarm.util.Preconditions;
+import com.mazurok.maxim.calendaralarm.BuildConfig;
+import com.mazurok.maxim.calendaralarm.logger.Logger;
+import com.mazurok.maxim.calendaralarm.util.Preconditions;
 
 public class AlarmProvider extends ContentProvider {
     private AlarmDatabaseHelper mOpenHelper;

@@ -1,7 +1,7 @@
-package com.better.alarm.logger
+package com.mazurok.maxim.calendaralarm.logger
 
 import androidx.collection.CircularArray
-import com.better.alarm.logger.Logger.LogLevel
+import com.mazurok.maxim.calendaralarm.logger.Logger.LogLevel
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.Date

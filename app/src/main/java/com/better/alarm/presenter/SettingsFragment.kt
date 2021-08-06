@@ -1,4 +1,4 @@
-package com.better.alarm.presenter
+package com.mazurok.maxim.calendaralarm.presenter
 
 import android.content.ContentResolver
 import android.content.Intent
@@ -13,13 +13,13 @@ import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceFragmentCompat
-import com.better.alarm.R
-import com.better.alarm.checkPermissions
-import com.better.alarm.configuration.Prefs
-import com.better.alarm.configuration.globalInject
-import com.better.alarm.lollipop
-import com.better.alarm.model.Alarmtone
-import com.better.alarm.view.VolumePreference
+import com.mazurok.maxim.calendaralarm.R
+import com.mazurok.maxim.calendaralarm.checkPermissions
+import com.mazurok.maxim.calendaralarm.configuration.Prefs
+import com.mazurok.maxim.calendaralarm.configuration.globalInject
+import com.mazurok.maxim.calendaralarm.lollipop
+import com.mazurok.maxim.calendaralarm.model.Alarmtone
+import com.mazurok.maxim.calendaralarm.view.VolumePreference
 import io.reactivex.disposables.CompositeDisposable
 
 /**

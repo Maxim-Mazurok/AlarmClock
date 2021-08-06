@@ -1,4 +1,4 @@
-package com.better.alarm.test
+package com.mazurok.maxim.calendaralarm.test
 
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu
@@ -7,7 +7,7 @@ import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry.getInstrumentation
-import com.better.alarm.presenter.AlarmsListActivity
+import com.mazurok.maxim.calendaralarm.presenter.AlarmsListActivity
 import org.junit.Rule
 import org.junit.Test
 import org.junit.rules.RuleChain

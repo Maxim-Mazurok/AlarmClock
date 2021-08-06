@@ -1,3 +1,3 @@
-package com.better.alarm.presenter
+package com.mazurok.maxim.calendaralarm.presenter
 
 data class PickedTime(val hour: Int, val minute: Int)

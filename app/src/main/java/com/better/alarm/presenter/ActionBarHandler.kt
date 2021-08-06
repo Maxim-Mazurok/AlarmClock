@@ -1,4 +1,4 @@
-package com.better.alarm.presenter
+package com.mazurok.maxim.calendaralarm.presenter
 
 import android.app.Activity
 import android.app.AlertDialog
@@ -16,11 +16,11 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import androidx.core.view.MenuItemCompat
-import com.better.alarm.BuildConfig
-import com.better.alarm.R
-import com.better.alarm.bugreports.BugReporter
-import com.better.alarm.interfaces.IAlarmsManager
-import com.better.alarm.lollipop
+import com.mazurok.maxim.calendaralarm.BuildConfig
+import com.mazurok.maxim.calendaralarm.R
+import com.mazurok.maxim.calendaralarm.bugreports.BugReporter
+import com.mazurok.maxim.calendaralarm.interfaces.IAlarmsManager
+import com.mazurok.maxim.calendaralarm.lollipop
 import io.reactivex.disposables.Disposables
 
 

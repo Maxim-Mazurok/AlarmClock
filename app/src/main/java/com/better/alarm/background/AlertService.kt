@@ -1,16 +1,16 @@
-package com.better.alarm.background
+package com.mazurok.maxim.calendaralarm.background
 
 import android.app.Notification
-import com.better.alarm.BuildConfig
-import com.better.alarm.interfaces.IAlarmsManager
-import com.better.alarm.interfaces.Intents
-import com.better.alarm.isOreo
-import com.better.alarm.logger.Logger
-import com.better.alarm.model.Alarmtone
-import com.better.alarm.util.modify
-import com.better.alarm.util.requireValue
-import com.better.alarm.util.subscribeWith
-import com.better.alarm.wakelock.Wakelocks
+import com.mazurok.maxim.calendaralarm.BuildConfig
+import com.mazurok.maxim.calendaralarm.interfaces.IAlarmsManager
+import com.mazurok.maxim.calendaralarm.interfaces.Intents
+import com.mazurok.maxim.calendaralarm.isOreo
+import com.mazurok.maxim.calendaralarm.logger.Logger
+import com.mazurok.maxim.calendaralarm.model.Alarmtone
+import com.mazurok.maxim.calendaralarm.util.modify
+import com.mazurok.maxim.calendaralarm.util.requireValue
+import com.mazurok.maxim.calendaralarm.util.subscribeWith
+import com.mazurok.maxim.calendaralarm.wakelock.Wakelocks
 import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
